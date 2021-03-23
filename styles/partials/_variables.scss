@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Roboto&display=swap");
+
+@mixin heading($sizeValue) {
+  font-size: $sizeValue;
+  color: $black;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 4.3rem;
+}
+
+@mixin subHeading($sizeValue) {
+  font-size: $sizeValue;
+  color: $black;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+@mixin paragraph($sizeValue) {
+  font-size: $sizeValue;
+  color: $black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@mixin navLink($sizeValue) {
+  font-size: $sizeValue;
+  color: $white;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+}
