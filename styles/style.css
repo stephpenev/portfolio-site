@@ -486,8 +486,8 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .projects .thirdHeadingFlex a:hover, .projects .thirdHeadingFlex a:focus {
-  -webkit-box-shadow: inset 0 -12px #EDE1DF;
-          box-shadow: inset 0 -12px #EDE1DF;
+  -webkit-box-shadow: inset 0 -12px #77CDBE;
+          box-shadow: inset 0 -12px #77CDBE;
 }
 
 .projects .thirdHeadingFlex a:visited, .projects .thirdHeadingFlex a:active {
@@ -520,6 +520,7 @@ nav ul li a:hover, nav ul li a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  height: 80vh;
 }
 
 .projects .devProjects .devProjectSingle .devImage {
@@ -534,6 +535,7 @@ nav ul li a:hover, nav ul li a:focus {
 .projects .devProjects .devProjectSingle .devFlex {
   width: 50%;
   min-width: 300px;
+  height: 250px;
   margin-left: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -547,19 +549,20 @@ nav ul li a:hover, nav ul li a:focus {
           justify-content: space-between;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .textFlex h4 {
-  font-size: 2.2rem;
+.projects .devProjects .devProjectSingle .devFlex .textBox h4 {
+  font-size: 2.5rem;
   color: #060000;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
+  font-weight: bolder;
   padding-bottom: 4%;
   padding-left: 2%;
   border-bottom: 1px solid #060000;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .textFlex p {
-  font-size: 1.6rem;
+.projects .devProjects .devProjectSingle .devFlex .textBox p {
+  font-size: 1.8rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -568,76 +571,35 @@ nav ul li a:hover, nav ul li a:focus {
   margin-top: 4%;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .linkFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectIcons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  min-width: 220px;
+.projects .devProjects .devProjectSingle .devFlex .textBox .skillsUsed {
   margin-left: 2%;
+  margin-top: 4%;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectIcons ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  width: 100%;
-  margin: 0;
-}
-
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectIcons ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: calc(100% / 3);
-  margin-right: 4%;
-}
-
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectIcons ul li img {
-  width: 100%;
-  max-width: 60px;
-}
-
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectIcons ul li h4 {
-  font-size: 1.4rem;
+.projects .devProjects .devProjectSingle .devFlex .textBox .skillsUsed h5 {
+  font-size: 1.7rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 2.2rem;
-  font-weight: bolder;
-  text-align: center;
-  line-height: 1.6rem;
-  margin-top: 2px;
+  margin-right: 3%;
+  display: inline-block;
+  background-color: #EDE1DF;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectLinks {
+.projects .devProjects .devProjectSingle .devFlex .projectLinks {
+  margin-left: 2%;
   padding-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectLinks a {
-  font-size: 1.6rem;
+.projects .devProjects .devProjectSingle .devFlex .projectLinks a {
+  font-size: 1.8rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -645,8 +607,9 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: #124966;
   color: #FFFFFF;
   padding: 6px 15px;
+  margin-right: 5px;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .linkFlex .projectLinks a:hover, .projects .devProjects .devProjectSingle .devFlex .linkFlex .projectLinks a:focus {
+.projects .devProjects .devProjectSingle .devFlex .projectLinks a:hover, .projects .devProjects .devProjectSingle .devFlex .projectLinks a:focus {
   background-color: #7192A3;
 }
