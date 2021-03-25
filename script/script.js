@@ -19,6 +19,16 @@ menuButton.addEventListener('click', () => {
   }
 });
 
+// Menu smooth scroll to sections
+
+navList.addEventListener('click', (event) => {
+  if (event.target.tagName == "LI") {
+    const type = event.target.className;
+    const scrollTo = document.querySelector("#" + type);
+    scrollTo.scrollIntoView({ behavior: "smooth" });
+  }
+}); 
+
 // Toggling dev and design sections visible and invisible //
 
 // Button variables

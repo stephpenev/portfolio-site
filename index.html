@@ -18,20 +18,23 @@
           </h1>
         </div>
       </div>
+      <div class="mouseDown">
+        <div class="line"></div>
+      </div>
       <nav class="navMenu">
         <div class="menuButton">
           <div class="menuButtonBurger"></div>
         </div>
         <ul class="navList">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="about" tabindex="0">About</li>
+          <li class="projects" tabindex="0">Projects</li>
+          <li class="skills" tabindex="0">Skills</li>
+          <li class="contact" tabindex="0">Contact</li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="about" id="about">
+      <section class="aboutSection" id="about">
         <div class="wrapper">
           <div class="subheadingDiv">
             <h2 class="sectionHeader">About</h2>
@@ -51,7 +54,7 @@
           </div>
         </div>
       </section>
-      <section class="projects wrapper" id="projects">
+      <section class="projectsSection wrapper" id="projects">
         <div class="subheadingDiv">
           <h2 class="sectionHeader">Projects</h2>
         </div>
@@ -71,14 +74,13 @@
               <div class="textBox">
                 <h4>Adjacent</h4>
                 <p>
-                  With a partner, built an app that allows a user to find
-                  recommended similar artists based on an initial artist search,
-                  using two different APIs.
+                  Working in a paired group, built an app that allows music lovers to find recommended similar artists based on their search. Uses the Last.fm and AudioDB APIs.
                 </p>
                 <div class="skillsUsed">
                   <h5>Javascript</h5>
-                  <h5>Sass</h5>
+                  <h5>SCSS</h5>
                   <h5>RESTful APIs</h5>
+                  <h5>Paired Programming</h5>
                 </div>
               </div>
               <div class="projectLinks">
@@ -98,13 +100,12 @@
               <div class="textBox">
                 <h4>Compass</h4>
                 <p>
-                  Built a daily intention-setting journal app, allowing the
-                  writer to record their mindset goal for the day, and track
-                  their intentions over time.
+                  Built a daily intention-setting journal app, allowing the writer to record their intention or mindset goal for the day, and track their intentions over time.
                 </p>
                 <div class="skillsUsed">
                   <h5>React</h5>
                   <h5>Firebase</h5>
+                  <h5>CSS3</h5>
                 </div>
               </div>
               <div class="projectLinks">
@@ -124,14 +125,13 @@
               <div class="textBox">
                 <h4>Fiction Face/Off</h4>
                 <p>
-                  As part of a group, built an app that enables a user to search
-                  any media title to to see whether it has a film or literary
-                  counterpart, and find out which one is the better rated.
+                  Within a four person team, built an app that enables a user to search any media title to discover whether it has a film or literary counterpart, and find out which of the two is the better rated.
                 </p>
                 <div class="skillsUsed">
                   <h5>React</h5>
                   <h5>RESTful APIs</h5>
-                  <h5>Sass</h5>
+                  <h5>SCSS</h5>
+                  <h5>Paired Programming</h5>
                 </div>
               </div>
               <div class="projectLinks">
@@ -144,62 +144,60 @@
         <div class="designProjects">
           <ul>
             <li>
-              <a href="#">
-                <img
-                  class="cover"
-                  src="./assets/351KingSt_Signage_cover.png"
-                  alt="The Globe and Mail Centre in Toronto with leasing signage"
-                />
-                <h4>First Gulf | Signage</h4>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/Instdio_Logo_Colour.jpg"
-                  alt="Instdio Communications logo"
-                />
-                <h4>Instdio Communications</h4>
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="./assets/App_Mockup4.jpg"
-                  alt="iPad with First Gulf retail app on screen"
+              <img
+                src="./assets/351KingSt_Signage_cover.png"
+                alt="The Globe and Mail Centre in Toronto with leasing signage"
               />
-              <h4>First Gulf Retail App</h4>
-              </a>
+              <div class="designBox">
+                <a href="#"><h4>First Gulf | Signage</h4></a>
+              </div>
             </li>
             <li>
-              <a href="#" class="imageWrap">
-                <img
-                  class="cover"
-                  src="./assets/FG-booth-1.jpg"
-                  alt="First Gulf Conference Booth"
-                />
-                <h4 class="imageDesc">First Gulf | Branding</h4>
-              </a>
+              <img
+                src="./assets/Instdio_Logo_Colour.jpg"
+                alt="Instdio Communications logo"
+              />
+              <div class="designBox">
+                <a href="#"><h4>Instdio Communications</h4></a>
+              </div>
             </li>
             <li>
-              <a href="#">
-                <img src="./assets/Monde_1.jpg" alt="Monde condo signage"/>
-                <h4>Monde Condo</h4>
-              </a>
+              <img
+                src="./assets/App_Mockup4.jpg"
+                alt="iPad with First Gulf retail app on screen"
+              />
+              <div class="designBox">
+                <a href="#"><h4>First Gulf Retail App</h4></a>
+              </div>
             </li>
             <li>
-              <a href="#"
-                ><img
-                  src="./assets/BKN_FullColour_logo.png"
-                  alt="Beekeepers Naturals logo"
-                />
-                <h4>Beekeeper's Naturals</h4></a
-              >
+              <img
+                src="./assets/FG-booth-1.jpg"
+                alt="First Gulf Conference Booth"
+              />
+              <div class="designBox">
+                <a href="#"><h4>First Gulf | Branding</h4></a>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/Monde_1.jpg" alt="Monde condo signage" />
+              <div class="designBox">
+                <a href="#"><h4>Monde Condo</h4></a>
+              </div>
+            </li>
+            <li>
+              <img
+                src="./assets/BKN_FullColour_logo.png"
+                alt="Beekeepers Naturals logo"
+              />
+              <div class="designBox">
+                <a href="#"><h4>Beekeeper's Naturals</h4></a>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="skills" id="skills">
+      <section class="skillsSection" id="skills">
         <div class="wrapper">
           <div class="subheadingDiv">
             <h2 class="sectionHeader">Skills</h2>
@@ -258,7 +256,7 @@
             </li>
           </ul>
           <div class="nonTechSkills">
-            <h3>Non-Technical Skills</h3>
+            <h3>Bonus Skills</h3>
             <ul>
               <li>
                 <img
@@ -279,10 +277,12 @@
           </div>
         </div>
       </section>
-      <section class="contact" id="contact">
+      <section class="contactSection" id="contact">
         <div class="wrapper">
-          <h2 class="sectionHeader">Contact</h2>
-          <div class="contactFlex">
+          <div class="subheadingDiv">
+            <h2>Contact</h2>
+          </div>
+          <!-- <div class="contactFlex">
             <div class="contactForm">
               <form action="submit">
                 <legend class="srOnly">Comment Form</legend>
@@ -324,15 +324,21 @@
                 </div>
               </form>
             </div>
-          </div>
+          </div> -->
           <div class="connectFlex">
             <h3>Let's connect!</h3>
-            <p>Some text here</p>
-            <div class="projectIcons">
-              <img src="#" alt="" />
-              <img src="#" alt="" />
-              <img src="#" alt="" />
-            </div>
+            <p>Do you love coffee? What a coincidence. Let's meet up virtually over a cup of java (+ other hot beverages welcome of course)!</p>
+            <ul>
+              <li>
+                <a href="mailto:stephanie.penev@gmail.com" target="_blank" rel="noreferrer noopener"><img src="./assets/icon-set-15.svg" alt="Email" /></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/stephaniepenev/" target="_blank" rel="noreferrer noopener"><img src="./assets/icon-set-16.svg" alt="LinkedIn"></a>
+              </li>
+              <li>
+                <a href="https://github.com/stephpenev" target="_blank" rel="noreferrer noopener"><img src="./assets/icon-set-10.svg" alt="Github"></a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

@@ -1,0 +1,11 @@
+footer {
+  background-color: $white;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    @include subheading(1.8rem);
+  }
+}

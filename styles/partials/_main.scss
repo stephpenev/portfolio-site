@@ -3,7 +3,7 @@
 body * {
   margin: 0;
   padding: 0;
-  border: 1px solid coral;
+  // border: 1px solid coral;
 }
 
 .wrapper {
@@ -24,144 +24,13 @@ ul {
   list-style-type: none;
 }
 
-// button,
-// a,
-// input {
-//   transition: all 0.3s ease-in-out;
-// }
-
 img {
   display: block;
 }
 
-// Header styles
+// Section 1 - About
 
-.header {
-  height: 100vh;
-  width: 70%;
-  padding-top: 120px;
-  display: flex;
-  justify-content: flex-start;
-
-  .logo img {
-    width: 7%;
-    max-width: 100px;
-    min-width: 60px;
-  }
-
-  .headerText {
-    @include heading(1.6rem);
-    margin-top: 170px;
-    margin-left: 25%;
-    width: 40%;
-    min-width: 400px;
-  }
-}
-
-nav {
-  width: 150px;
-  height: 250px;
-  position: fixed;
-  top: 120px;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 10;
-
-  .menuButton {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-  }
-
-  .menuButtonBurger {
-    width: 20px;
-    height: 3px;
-    background-color: $darkGreen;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
-    display: flex;
-    justify-content: flex-end;
-
-    &::before,
-    ::after {
-      content: "";
-      position: absolute;
-      width: 30px;
-      height: 3px;
-      background-color: $darkGreen;
-      border-radius: 5px;
-      transition: all 0.5s ease-in-out;
-      transform: translateY(-12px);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 30px;
-      height: 3px;
-      background-color: $darkGreen;
-      border-radius: 5px;
-      transform: translateY(12px);
-    }
-  }
-  // Menu animation
-  .menuButton.open .menuButtonBurger {
-    background-color: transparent;
-    transition: all 0.1s ease-in-out;
-  }
-
-  .menuButton.open {
-    .menuButtonBurger {
-      &::before {
-        transform: rotate(90deg);
-        transition: all 0.5s ease-in-out;
-        background-color: $white;
-      }
-
-      &::after {
-        transform: translateY(-1px);
-        transition: all 0.5s ease-in-out;
-        background-color: $white;
-      }
-    }
-  }
-  ul {
-    display: none;
-
-    li {
-      margin: 10px 30px;
-
-      a {
-        @include navLink(2rem);
-
-        &:hover,
-        &:focus {
-          box-shadow: inset 0 -10px $mediumRose;
-        }
-      }
-    }
-  }
-}
-
-// Menu expansion on click
-.navMenu.open {
-  background-color: $seaGreen;
-  transition: all 0.5s ease-in-out;
-}
-
-.navList.open {
-  display: block;
-}
-
-// Section 2 - About
-
-.about {
+.aboutSection {
   background-color: $lightRose;
   height: 90vh;
   padding-top: 65px;
@@ -186,18 +55,19 @@ nav {
   }
 }
 
-// Section 3 - Projects
+// Section 2A - Dev Projects
 
-.projects {
+.projectsSection {
   padding-top: 65px;
 
   .thirdHeadingFlex {
     display: flex;
     @include subheading(2.2rem);
     margin: 15px 0 20px 5px;
+    
 
     a {
-      padding: 10px 7px 10px;
+      padding: 2px 7px 10px;
 
       &:hover,
       &:focus {
@@ -227,7 +97,11 @@ nav {
       display: flex;
       justify-content: center;
       width: 100%;
-      height: 80vh;
+      height: 100vh;
+
+      &:last-of-type {
+        height: 80vh;
+      }
 
       .devImage {
         width: 400px;
@@ -251,7 +125,7 @@ nav {
           h4 {
             @include subheading(2.5rem);
             font-weight: bolder;
-            padding-bottom: 4%;
+            padding-bottom: 3%;
             padding-left: 2%;
             border-bottom: 1px solid $black;
           }
@@ -259,7 +133,7 @@ nav {
           p {
             @include paragraph(1.8rem);
             margin-left: 2%;
-            margin-top: 4%;
+            margin-top: 3%;
           }
 
           .skillsUsed {
@@ -283,20 +157,22 @@ nav {
 
           a {
             @include subheading(1.8rem);
-            background-color: $darkGreen;
+            background-color: $seaGreen;
             color: $white;
             padding: 6px 15px;
             margin-right: 5px;
 
             &:hover,
             &:focus {
-              background-color: $seaGreen;
+              box-shadow: inset 0 -12px $darkGreen;
             }
           }
         }
       }
     }
   }
+
+  // Section 2B - Design Projects
 
   .designProjects {
     display: none;
@@ -308,49 +184,44 @@ nav {
     flex-wrap: wrap;
 
     li {
-      width: 40%;
-      margin-right: 5%;
+      margin: 2%;
+      position: relative;
 
-      &:nth-of-type(2n) {
-        margin-right: 0;
-      }
-
-      a {
-        position: relative;
-
-        img {
-          width: 100%;
-        }
+      img {
+        width: 100%;
       }
     }
   }
 
-  // .imageWrap {
-      //   position: relative;
-      //   width: 100%;
+  .designBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $brandGreen;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
 
-      //   .imageDesc {
-      //     @include subheading(2rem);
-      //     position: absolute;
-      //     top: 0;
-      //     bottom: 0;
-      //     left: 0;
-      //     right: 0;
-      //     display: flex;
-      //     justify-content: center;
-      //     align-items: center;
-      //     background: $brandGreen;
-      //     color: $white;
-      //     visibility: hidden;
-      //     opacity: 0;
-      //     transition: opacity 0.5s, visibility 0.5s;
-      //   }
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
 
-      //   &:hover .imageDesc {
-      //     visibility: visible;
-      //     opacity: 1;
-      //   }
-      // }
+    a {
+      @include subheading(2.4rem);
+      color: white;
+
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 -14px $darkGreen;
+      }
+    }
+  }
 }
 
 .devProjects.open,
@@ -403,9 +274,9 @@ nav {
   display: none;
 }
 
-// Section 5 - Skills
+// Section 3 - Skills
 
-.skills {
+.skillsSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -423,11 +294,18 @@ nav {
     margin: 0 auto;
 
     li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       width: 8%;
-      max-width: 200px;
       min-width: 100px;
       margin: 3%;
+
+      img {
+        width: 70%;
+      }
 
       h4 {
         @include subheading(1.4rem);
@@ -446,14 +324,21 @@ nav {
       margin-right: 5%;
 
       li {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 2%;
-        max-width: 190px;
         min-width: 100px;
         margin: 3%;
 
+        img {
+          width: 70%;
+        }
+
         h4 {
           @include subheading(1.4rem);
+          line-height: 1.7rem;
+          margin-top: 4px;
         }
       }
     }
@@ -465,7 +350,68 @@ nav {
       padding: 10px 7px 10px;
       width: 30%;
       min-width: 300px;
-      border-bottom: 1px solid #060000;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+// Section 5 - Contact
+
+.contactSection {
+  padding-top: 65px;
+  height: 100vh;
+  background-color: $lightRose;
+
+  .connectFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40%;
+
+    h3 {
+      @include subheading(2.2rem);
+      margin-top: 15%;
+      font-weight: bolder;
+    }
+
+    p {
+      @include paragraph(2rem);
+      margin-top: 5%;
+      width: 75%;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 5%;
+      width: 90%;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        width: 2%;
+        min-width: 60px;
+        margin: 3%;
+        margin-top: 0;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        a {
+          width: 100%;
+
+          img {
+            width: 100%;
+
+            &:hover,
+            &:focus {
+              border-bottom: 10px solid $darkGreen;
+            }
+          }
+        }
+      }
     }
   }
 }

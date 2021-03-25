@@ -240,45 +240,50 @@ html {
   font-size: 62.5%;
 }
 
-body * {
-  margin: 0;
-  padding: 0;
-  border: 1px solid coral;
+header {
+  height: 100vh;
 }
 
-.wrapper {
-  width: 85%;
-  max-width: 1200px;
-  margin: 0 auto;
+header .mouseDown {
+  position: absolute;
+  left: 50%;
+  top: 90%;
 }
 
-.subheadingDiv {
-  font-size: 2rem;
-  color: #060000;
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
-  line-height: 2rem;
-  width: 30%;
-  min-width: 300px;
-  padding: 15px;
-  border-top: 1px solid #060000;
-  border-bottom: 1px solid #060000;
+header .mouseDown .line {
+  width: 2px;
+  height: 5vh;
+  background: #060000;
+  position: relative;
+  -webkit-animation: scrollUpDown 3s infinite;
+          animation: scrollUpDown 3s infinite;
 }
 
-a {
-  text-decoration: none;
+@-webkit-keyframes scrollUpDown {
+  0% {
+    top: 5px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 5px;
+  }
 }
 
-ul {
-  list-style-type: none;
-}
-
-img {
-  display: block;
+@keyframes scrollUpDown {
+  0% {
+    top: 5px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 5px;
+  }
 }
 
 .header {
-  height: 100vh;
   width: 70%;
   padding-top: 120px;
   display: -webkit-box;
@@ -303,8 +308,10 @@ img {
   line-height: 4.3rem;
   margin-top: 170px;
   margin-left: 25%;
+  padding-left: 2%;
   width: 40%;
   min-width: 400px;
+  border-left: 12px solid #77CDBE;
 }
 
 nav {
@@ -410,16 +417,14 @@ nav ul {
 
 nav ul li {
   margin: 10px 30px;
-}
-
-nav ul li a {
   font-size: 2rem;
   color: #FFFFFF;
   font-family: "Jost", sans-serif;
   font-weight: 400;
+  cursor: pointer;
 }
 
-nav ul li a:hover, nav ul li a:focus {
+nav ul li:hover, nav ul li:focus {
   -webkit-box-shadow: inset 0 -10px #D2B3AF;
           box-shadow: inset 0 -10px #D2B3AF;
 }
@@ -434,13 +439,49 @@ nav ul li a:hover, nav ul li a:focus {
   display: block;
 }
 
-.about {
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subheadingDiv {
+  font-size: 2rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  width: 30%;
+  min-width: 300px;
+  padding: 15px;
+  border-top: 1px solid #060000;
+  border-bottom: 1px solid #060000;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+.aboutSection {
   background-color: #EDE1DF;
   height: 90vh;
   padding-top: 65px;
 }
 
-.about .aboutFlex {
+.aboutSection .aboutFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,7 +490,7 @@ nav ul li a:hover, nav ul li a:focus {
           justify-content: flex-start;
 }
 
-.about .aboutFlex p {
+.aboutSection .aboutFlex p {
   font-size: 1.5rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
@@ -460,18 +501,18 @@ nav ul li a:hover, nav ul li a:focus {
   padding: 40px 10px;
 }
 
-.about .aboutFlex img {
+.aboutSection .aboutFlex img {
   width: 30%;
   min-width: 300px;
   margin-top: 40px;
   margin-left: 10%;
 }
 
-.projects {
+.projectsSection {
   padding-top: 65px;
 }
 
-.projects .thirdHeadingFlex {
+.projectsSection .thirdHeadingFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,29 +524,29 @@ nav ul li a:hover, nav ul li a:focus {
   margin: 15px 0 20px 5px;
 }
 
-.projects .thirdHeadingFlex a {
-  padding: 10px 7px 10px;
+.projectsSection .thirdHeadingFlex a {
+  padding: 2px 7px 10px;
 }
 
-.projects .thirdHeadingFlex a:hover, .projects .thirdHeadingFlex a:focus {
+.projectsSection .thirdHeadingFlex a:hover, .projectsSection .thirdHeadingFlex a:focus {
   -webkit-box-shadow: inset 0 -12px #77CDBE;
           box-shadow: inset 0 -12px #77CDBE;
 }
 
-.projects .thirdHeadingFlex a:visited, .projects .thirdHeadingFlex a:active {
+.projectsSection .thirdHeadingFlex a:visited, .projectsSection .thirdHeadingFlex a:active {
   color: #060000;
 }
 
-.projects .thirdHeadingFlex a:last-of-type {
+.projectsSection .thirdHeadingFlex a:last-of-type {
   margin-left: 45px;
 }
 
-.projects .underline {
+.projectsSection .underline {
   -webkit-box-shadow: inset 0 -12px #77CDBE;
           box-shadow: inset 0 -12px #77CDBE;
 }
 
-.projects .devProjects {
+.projectsSection .devProjects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,7 +560,7 @@ nav ul li a:hover, nav ul li a:focus {
   margin: 80px 0;
 }
 
-.projects .devProjects .devProjectSingle {
+.projectsSection .devProjects .devProjectSingle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,19 +568,23 @@ nav ul li a:hover, nav ul li a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  height: 100vh;
+}
+
+.projectsSection .devProjects .devProjectSingle:last-of-type {
   height: 80vh;
 }
 
-.projects .devProjects .devProjectSingle .devImage {
+.projectsSection .devProjects .devProjectSingle .devImage {
   width: 400px;
   min-width: 300px;
 }
 
-.projects .devProjects .devProjectSingle .devImage img {
+.projectsSection .devProjects .devProjectSingle .devImage img {
   width: 100%;
 }
 
-.projects .devProjects .devProjectSingle .devFlex {
+.projectsSection .devProjects .devProjectSingle .devFlex {
   width: 50%;
   min-width: 300px;
   height: 250px;
@@ -556,34 +601,34 @@ nav ul li a:hover, nav ul li a:focus {
           justify-content: space-between;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .textBox h4 {
+.projectsSection .devProjects .devProjectSingle .devFlex .textBox h4 {
   font-size: 2.5rem;
   color: #060000;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
   font-weight: bolder;
-  padding-bottom: 4%;
+  padding-bottom: 3%;
   padding-left: 2%;
   border-bottom: 1px solid #060000;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .textBox p {
+.projectsSection .devProjects .devProjectSingle .devFlex .textBox p {
   font-size: 1.8rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 2.2rem;
   margin-left: 2%;
-  margin-top: 4%;
+  margin-top: 3%;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .textBox .skillsUsed {
+.projectsSection .devProjects .devProjectSingle .devFlex .textBox .skillsUsed {
   margin-left: 2%;
   margin-top: 4%;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .textBox .skillsUsed h5 {
+.projectsSection .devProjects .devProjectSingle .devFlex .textBox .skillsUsed h5 {
   font-size: 1.7rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
@@ -594,7 +639,7 @@ nav ul li a:hover, nav ul li a:focus {
   background-color: #EDE1DF;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .projectLinks {
+.projectsSection .devProjects .devProjectSingle .devFlex .projectLinks {
   margin-left: 2%;
   padding-bottom: 5px;
   display: -webkit-box;
@@ -605,27 +650,28 @@ nav ul li a:hover, nav ul li a:focus {
           justify-content: flex-end;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .projectLinks a {
+.projectsSection .devProjects .devProjectSingle .devFlex .projectLinks a {
   font-size: 1.8rem;
   color: #060000;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
-  background-color: #124966;
+  background-color: #7192A3;
   color: #FFFFFF;
   padding: 6px 15px;
   margin-right: 5px;
 }
 
-.projects .devProjects .devProjectSingle .devFlex .projectLinks a:hover, .projects .devProjects .devProjectSingle .devFlex .projectLinks a:focus {
-  background-color: #7192A3;
+.projectsSection .devProjects .devProjectSingle .devFlex .projectLinks a:hover, .projectsSection .devProjects .devProjectSingle .devFlex .projectLinks a:focus {
+  -webkit-box-shadow: inset 0 -12px #124966;
+          box-shadow: inset 0 -12px #124966;
 }
 
-.projects .designProjects {
+.projectsSection .designProjects {
   display: none;
 }
 
-.projects ul {
+.projectsSection ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,21 +682,53 @@ nav ul li a:hover, nav ul li a:focus {
       flex-wrap: wrap;
 }
 
-.projects ul li {
-  width: 40%;
-  margin-right: 5%;
-}
-
-.projects ul li:nth-of-type(2n) {
-  margin-right: 0;
-}
-
-.projects ul li a {
+.projectsSection ul li {
+  margin: 2%;
   position: relative;
 }
 
-.projects ul li a img {
+.projectsSection ul li img {
   width: 100%;
+}
+
+.projectsSection .designBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #77CDBE;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.projectsSection .designBox:hover, .projectsSection .designBox:focus {
+  opacity: 1;
+}
+
+.projectsSection .designBox a {
+  font-size: 2.4rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  color: white;
+}
+
+.projectsSection .designBox a:hover, .projectsSection .designBox a:focus {
+  -webkit-box-shadow: inset 0 -14px #124966;
+          box-shadow: inset 0 -14px #124966;
 }
 
 .devProjects.open,
@@ -689,7 +767,7 @@ nav ul li a:hover, nav ul li a:focus {
   display: none;
 }
 
-.skills {
+.skillsSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -702,11 +780,11 @@ nav ul li a:hover, nav ul li a:focus {
           justify-content: center;
 }
 
-.skills .subheadingDiv {
+.skillsSection .subheadingDiv {
   margin-bottom: 65px;
 }
 
-.skills ul {
+.skillsSection ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -720,15 +798,31 @@ nav ul li a:hover, nav ul li a:focus {
   margin: 0 auto;
 }
 
-.skills ul li {
+.skillsSection ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   width: 8%;
-  max-width: 200px;
   min-width: 100px;
   margin: 3%;
 }
 
-.skills ul li h4 {
+.skillsSection ul li img {
+  width: 70%;
+}
+
+.skillsSection ul li h4 {
   font-size: 1.4rem;
   color: #060000;
   font-family: "Jost", sans-serif;
@@ -736,7 +830,7 @@ nav ul li a:hover, nav ul li a:focus {
   line-height: 2rem;
 }
 
-.skills .nonTechSkills ul {
+.skillsSection .nonTechSkills ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -752,23 +846,37 @@ nav ul li a:hover, nav ul li a:focus {
   margin-right: 5%;
 }
 
-.skills .nonTechSkills ul li {
-  text-align: center;
+.skillsSection .nonTechSkills ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 2%;
-  max-width: 190px;
   min-width: 100px;
   margin: 3%;
 }
 
-.skills .nonTechSkills ul li h4 {
+.skillsSection .nonTechSkills ul li img {
+  width: 70%;
+}
+
+.skillsSection .nonTechSkills ul li h4 {
   font-size: 1.4rem;
   color: #060000;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
+  line-height: 1.7rem;
+  margin-top: 4px;
 }
 
-.skills .nonTechSkills h3 {
+.skillsSection .nonTechSkills h3 {
   font-size: 2.2rem;
   color: #060000;
   font-family: "Jost", sans-serif;
@@ -781,4 +889,109 @@ nav ul li a:hover, nav ul li a:focus {
   width: 30%;
   min-width: 300px;
   border-bottom: 1px solid #060000;
+}
+
+.contactSection {
+  padding-top: 65px;
+  height: 100vh;
+  background-color: #EDE1DF;
+}
+
+.contactSection .connectFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 40%;
+}
+
+.contactSection .connectFlex h3 {
+  font-size: 2.2rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-top: 15%;
+  font-weight: bolder;
+}
+
+.contactSection .connectFlex p {
+  font-size: 2rem;
+  color: #060000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-top: 5%;
+  width: 75%;
+}
+
+.contactSection .connectFlex ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5%;
+  width: 90%;
+}
+
+.contactSection .connectFlex ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 2%;
+  min-width: 60px;
+  margin: 3%;
+  margin-top: 0;
+}
+
+.contactSection .connectFlex ul li:first-of-type {
+  margin-left: 0;
+}
+
+.contactSection .connectFlex ul li a {
+  width: 100%;
+}
+
+.contactSection .connectFlex ul li a img {
+  width: 100%;
+}
+
+.contactSection .connectFlex ul li a img:hover, .contactSection .connectFlex ul li a img:focus {
+  border-bottom: 10px solid #124966;
+}
+
+footer {
+  background-color: #FFFFFF;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  font-size: 1.8rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
 }
