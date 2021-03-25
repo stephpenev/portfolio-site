@@ -243,6 +243,7 @@ html {
 body * {
   margin: 0;
   padding: 0;
+  border: 1px solid coral;
 }
 
 .wrapper {
@@ -322,6 +323,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
 }
 
 nav .menuButton {
@@ -498,6 +500,11 @@ nav ul li a:hover, nav ul li a:focus {
   margin-left: 45px;
 }
 
+.projects .underline {
+  -webkit-box-shadow: inset 0 -12px #77CDBE;
+          box-shadow: inset 0 -12px #77CDBE;
+}
+
 .projects .devProjects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,9 +608,9 @@ nav ul li a:hover, nav ul li a:focus {
 .projects .devProjects .devProjectSingle .devFlex .projectLinks a {
   font-size: 1.8rem;
   color: #060000;
-  font-family: "Roboto", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
-  line-height: 2.2rem;
+  line-height: 2rem;
   background-color: #124966;
   color: #FFFFFF;
   padding: 6px 15px;
@@ -612,4 +619,166 @@ nav ul li a:hover, nav ul li a:focus {
 
 .projects .devProjects .devProjectSingle .devFlex .projectLinks a:hover, .projects .devProjects .devProjectSingle .devFlex .projectLinks a:focus {
   background-color: #7192A3;
+}
+
+.projects .designProjects {
+  display: none;
+}
+
+.projects ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects ul li {
+  width: 40%;
+  margin-right: 5%;
+}
+
+.projects ul li:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.projects ul li a {
+  position: relative;
+}
+
+.projects ul li a img {
+  width: 100%;
+}
+
+.devProjects.open,
+.designProjects.open {
+  display: block;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.devProjects.close,
+.designProjects.close {
+  display: none;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills .subheadingDiv {
+  margin-bottom: 65px;
+}
+
+.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  padding: 2%;
+  margin: 0 auto;
+}
+
+.skills ul li {
+  text-align: center;
+  width: 8%;
+  max-width: 200px;
+  min-width: 100px;
+  margin: 3%;
+}
+
+.skills ul li h4 {
+  font-size: 1.4rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.skills .nonTechSkills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 90%;
+  padding: 2%;
+  margin-right: 5%;
+}
+
+.skills .nonTechSkills ul li {
+  text-align: center;
+  width: 2%;
+  max-width: 190px;
+  min-width: 100px;
+  margin: 3%;
+}
+
+.skills .nonTechSkills ul li h4 {
+  font-size: 1.4rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.skills .nonTechSkills h3 {
+  font-size: 2.2rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  font-weight: bolder;
+  line-height: 2rem;
+  margin: 15px 0 0 5px;
+  padding: 10px 7px 10px;
+  width: 30%;
+  min-width: 300px;
+  border-bottom: 1px solid #060000;
 }
