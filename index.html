@@ -1,13 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steph Penev | Development & Design</title>
-</head>
-<body>
-  
-  <h1>Coming Soon...</h1>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steph Penev | Development & Design</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="wrapper">
+      <div class="header">
+        <div class="logo">
+          <img src="./assets/2020_Logo_web.png" alt="Stephanie Penev logo" />
+        </div>
+        <div class="headerText">
+          <h1>
+            Hi, I’m Stephanie Penev, a Front-End Web Developer + Designer.
+          </h1>
+        </div>
+      </div>
+      <div class="mouseDown">
+        <div class="line"></div>
+      </div>
+      <nav class="navMenu">
+        <div class="menuButton">
+          <div class="menuButtonBurger"></div>
+        </div>
+        <ul class="navList">
+          <li class="about" tabindex="0">About</li>
+          <li class="projects" tabindex="0">Projects</li>
+          <li class="skills" tabindex="0">Skills</li>
+          <li class="contact" tabindex="0">Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="aboutSection" id="about">
+        <div class="wrapper">
+          <div class="subheadingDiv">
+            <h2 class="sectionHeader">About</h2>
+          </div>
+          <div class="aboutFlex">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+              magnam explicabo dignissimos consequuntur ipsum minus sunt, quidem
+              in itaque ratione labore, distinctio animi harum nostrum nihil
+              quae repellendus, nobis laudantium. Assumenda libero consequatur
+              ducimus explicabo nesciunt debitis nihil nemo labore, molestias
+              cupiditate quis, odio eaque suscipit itaque excepturi ipsa
+              inventore non, nisi adipisci esse consequuntur ad necessitatibus
+              nobis ipsum! Itaque.
+            </p>
+            <img src="#" alt="Photo of Steph" />
+          </div>
+        </div>
+      </section>
+      <section class="projectsSection wrapper" id="projects">
+        <div class="subheadingDiv">
+          <h2 class="sectionHeader">Projects</h2>
+        </div>
+        <div class="thirdHeadingFlex">
+          <a href="#development" class="devButton"><h3>Development</h3></a>
+          <a href="#design" class="designButton"><h3>Design</h3></a>
+        </div>
+        <div class="devProjects">
+          <div class="devProjectSingle">
+            <div class="devImage">
+              <img
+                src="./assets/adjacent-lr.png"
+                alt="A laptop with a screen preview of Adjacent project app"
+              />
+            </div>
+            <div class="devFlex">
+              <div class="textBox">
+                <h4>Adjacent</h4>
+                <p>
+                  Working in a paired group, built an app that allows music lovers to find recommended similar artists based on their search. Uses the Last.fm and AudioDB APIs.
+                </p>
+                <div class="skillsUsed">
+                  <h5>Javascript</h5>
+                  <h5>SCSS</h5>
+                  <h5>RESTful APIs</h5>
+                  <h5>Paired Programming</h5>
+                </div>
+              </div>
+              <div class="projectLinks">
+                <a href="#">Live</a>
+                <a href="#">Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="devProjectSingle">
+            <div class="devImage">
+              <img
+                src="./assets/compass-lr.png"
+                alt="A laptop with a screen preview of the Compass project app"
+              />
+            </div>
+            <div class="devFlex">
+              <div class="textBox">
+                <h4>Compass</h4>
+                <p>
+                  Built a daily intention-setting journal app, allowing the writer to record their intention or mindset goal for the day, and track their intentions over time.
+                </p>
+                <div class="skillsUsed">
+                  <h5>React</h5>
+                  <h5>Firebase</h5>
+                  <h5>CSS3</h5>
+                </div>
+              </div>
+              <div class="projectLinks">
+                <a href="#">Live</a>
+                <a href="#">Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="devProjectSingle">
+            <div class="devImage">
+              <img
+                src="./assets/fiction-faceoff-lr.png"
+                alt="A laptop with a screen preview of the Compass project app"
+              />
+            </div>
+            <div class="devFlex">
+              <div class="textBox">
+                <h4>Fiction Face/Off</h4>
+                <p>
+                  Within a four person team, built an app that enables a user to search any media title to discover whether it has a film or literary counterpart, and find out which of the two is the better rated.
+                </p>
+                <div class="skillsUsed">
+                  <h5>React</h5>
+                  <h5>RESTful APIs</h5>
+                  <h5>SCSS</h5>
+                  <h5>Paired Programming</h5>
+                </div>
+              </div>
+              <div class="projectLinks">
+                <a href="#">Live</a>
+                <a href="#">Github</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="designProjects">
+          <ul>
+            <li>
+              <img
+                src="./assets/351KingSt_Signage_cover.png"
+                alt="The Globe and Mail Centre in Toronto with leasing signage"
+              />
+              <div class="designBox">
+                <a href="#"><h4>First Gulf | Signage</h4></a>
+              </div>
+            </li>
+            <li>
+              <img
+                src="./assets/Instdio_Logo_Colour.jpg"
+                alt="Instdio Communications logo"
+              />
+              <div class="designBox">
+                <a href="#"><h4>Instdio Communications</h4></a>
+              </div>
+            </li>
+            <li>
+              <img
+                src="./assets/App_Mockup4.jpg"
+                alt="iPad with First Gulf retail app on screen"
+              />
+              <div class="designBox">
+                <a href="#"><h4>First Gulf Retail App</h4></a>
+              </div>
+            </li>
+            <li>
+              <img
+                src="./assets/FG-booth-1.jpg"
+                alt="First Gulf Conference Booth"
+              />
+              <div class="designBox">
+                <a href="#"><h4>First Gulf | Branding</h4></a>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/Monde_1.jpg" alt="Monde condo signage" />
+              <div class="designBox">
+                <a href="#"><h4>Monde Condo</h4></a>
+              </div>
+            </li>
+            <li>
+              <img
+                src="./assets/BKN_FullColour_logo.png"
+                alt="Beekeepers Naturals logo"
+              />
+              <div class="designBox">
+                <a href="#"><h4>Beekeeper's Naturals</h4></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="skillsSection" id="skills">
+        <div class="wrapper">
+          <div class="subheadingDiv">
+            <h2 class="sectionHeader">Skills</h2>
+          </div>
+          <ul>
+            <li>
+              <img src="./assets/icon-set-01.svg" alt="HTML5 icon" />
+              <h4>HTML5</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-02.svg" alt="CSS3 icon" />
+              <h4>CSS3</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-03.svg" alt="Sass icon" />
+              <h4>Sass</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-04.svg" alt="Javascript icon" />
+              <h4>Javascript + ES6</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-05.svg" alt="Firebase icon" />
+              <h4>Firebase</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-06.svg" alt="React icon" />
+              <h4>React</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-07.svg" alt="RESTful APIs icon" />
+              <h4>RESTful APIs</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-08.svg" alt="Responsive icon" />
+              <h4>Responsive Design</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-09.svg" alt="Accessibility icon" />
+              <h4>Accessibility</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-10.svg" alt="Github icon" />
+              <h4>Github</h4>
+            </li>
+            <li>
+              <img src="./assets/icon-set-11.svg" alt="Graphic Design icon" />
+              <h4>Graphic Design</h4>
+            </li>
+            <li>
+              <img
+                src="./assets/icon-set-12.svg"
+                alt="Adobe Creative Cloud icon"
+              />
+              <h4>Adobe Creative Cloud</h4>
+            </li>
+          </ul>
+          <div class="nonTechSkills">
+            <h3>Bonus Skills</h3>
+            <ul>
+              <li>
+                <img
+                  src="./assets/icon-set-13.svg"
+                  alt="Project Management icon"
+                />
+                <h4>Project Management</h4>
+              </li>
+              <li>
+                <img src="./assets/icon-set-14.svg" alt="Collaboration icon" />
+                <h4>Collaboration</h4>
+              </li>
+              <li>
+                <img src="./assets/icon-set-17.svg" alt="Copywriting icon" />
+                <h4>Copywriting</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="contactSection" id="contact">
+        <div class="wrapper">
+          <div class="subheadingDiv">
+            <h2>Contact</h2>
+          </div>
+          <!-- <div class="contactFlex">
+            <div class="contactForm">
+              <form action="submit">
+                <legend class="srOnly">Comment Form</legend>
+                <div class="contactFormFlex1">
+                  <div class="contactNameFlex">
+                    <label for="contactName" class="contactName">Name</label>
+                    <input
+                      type="text"
+                      name="contactName"
+                      id="contactName"
+                      class="contactName"
+                    />
+                  </div>
+                  <div class="contactEmailFlex">
+                    <label for="contactEmail" class="contactEmail"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      name="contactEmail"
+                      id="contactEmail"
+                      class="contactEmail"
+                    />
+                  </div>
+                </div>
+                <div class="contactFormFlex2">
+                  <label for="message" class="srOnly">Message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    class="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="MESSAGE"
+                  ></textarea>
+                  <button>
+                    <h4>Submit</h4>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div> -->
+          <div class="connectFlex">
+            <h3>Let's connect!</h3>
+            <p>Do you love coffee? What a coincidence. Let's meet up virtually over a cup of java (+ other hot beverages welcome of course)!</p>
+            <ul>
+              <li>
+                <a href="mailto:stephanie.penev@gmail.com" target="_blank" rel="noreferrer noopener"><img src="./assets/icon-set-15.svg" alt="Email" /></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/stephaniepenev/" target="_blank" rel="noreferrer noopener"><img src="./assets/icon-set-16.svg" alt="LinkedIn"></a>
+              </li>
+              <li>
+                <a href="https://github.com/stephpenev" target="_blank" rel="noreferrer noopener"><img src="./assets/icon-set-10.svg" alt="Github"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><p>Made by Stephanie Penev &copy 2021</p></footer>
+    <script src="./script/script.js"></script>
+  </body>
 </html>

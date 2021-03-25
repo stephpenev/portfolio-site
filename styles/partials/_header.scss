@@ -1,0 +1,152 @@
+// Header styles
+
+header {
+  height: 100vh;
+
+  .mouseDown {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+
+    .line {
+      width: 2px;
+      height: 5vh;
+      background: $black;
+      position: relative;
+      animation: scrollUpDown 3s infinite;
+    }
+  }
+  @keyframes scrollUpDown {
+    0% {
+      top: 5px;
+    }
+    50% {
+      top: 20px;
+    }
+    100% {
+      top: 5px;
+    }
+  }
+}
+
+.header {
+  width: 70%;
+  padding-top: 120px;
+  display: flex;
+  justify-content: flex-start;
+
+  .logo img {
+    width: 7%;
+    max-width: 100px;
+    min-width: 60px;
+  }
+
+  .headerText {
+    @include heading(1.6rem);
+    margin-top: 170px;
+    margin-left: 25%;
+    padding-left: 2%;
+    width: 40%;
+    min-width: 400px;
+    border-left: 12px solid $brandGreen;
+  }
+}
+
+nav {
+  width: 150px;
+  height: 250px;
+  position: fixed;
+  top: 120px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+
+  .menuButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+  }
+
+  .menuButtonBurger {
+    width: 20px;
+    height: 3px;
+    background-color: $darkGreen;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
+
+    &::before,
+    ::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: $darkGreen;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+      transform: translateY(-12px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: $darkGreen;
+      border-radius: 5px;
+      transform: translateY(12px);
+    }
+  }
+  // Menu animation
+  .menuButton.open .menuButtonBurger {
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .menuButton.open {
+    .menuButtonBurger {
+      &::before {
+        transform: rotate(90deg);
+        transition: all 0.5s ease-in-out;
+        background-color: $white;
+      }
+
+      &::after {
+        transform: translateY(-1px);
+        transition: all 0.5s ease-in-out;
+        background-color: $white;
+      }
+    }
+  }
+  ul {
+    display: none;
+
+    li {
+      margin: 10px 30px;
+      @include navLink(2rem);
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 -10px $mediumRose;
+      }
+    }
+  }
+}
+
+// Menu expansion on click
+.navMenu.open {
+  background-color: $seaGreen;
+  transition: all 0.5s ease-in-out;
+}
+
+.navList.open {
+  display: block;
+}

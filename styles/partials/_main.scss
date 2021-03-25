@@ -1,0 +1,417 @@
+// Global styles
+
+body * {
+  margin: 0;
+  padding: 0;
+  // border: 1px solid coral;
+}
+
+.wrapper {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subheadingDiv {
+  @include subheadingDiv();
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+// Section 1 - About
+
+.aboutSection {
+  background-color: $lightRose;
+  height: 90vh;
+  padding-top: 65px;
+
+  .aboutFlex {
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      @include paragraph(1.5rem);
+      width: 30%;
+      min-width: 300px;
+      padding: 40px 10px;
+    }
+
+    img {
+      width: 30%;
+      min-width: 300px;
+      margin-top: 40px;
+      margin-left: 10%;
+    }
+  }
+}
+
+// Section 2A - Dev Projects
+
+.projectsSection {
+  padding-top: 65px;
+
+  .thirdHeadingFlex {
+    display: flex;
+    @include subheading(2.2rem);
+    margin: 15px 0 20px 5px;
+    
+
+    a {
+      padding: 2px 7px 10px;
+
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 -12px $brandGreen;
+      }
+      &:visited,
+      &:active {
+        color: $black;
+      }
+      &:last-of-type {
+        margin-left: 45px;
+      }
+    }
+  }
+
+  .underline {
+    box-shadow: inset 0 -12px $brandGreen;
+  }
+
+  .devProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+
+    .devProjectSingle {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+
+      &:last-of-type {
+        height: 80vh;
+      }
+
+      .devImage {
+        width: 400px;
+        min-width: 300px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .devFlex {
+        width: 50%;
+        min-width: 300px;
+        height: 250px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .textBox {
+          h4 {
+            @include subheading(2.5rem);
+            font-weight: bolder;
+            padding-bottom: 3%;
+            padding-left: 2%;
+            border-bottom: 1px solid $black;
+          }
+
+          p {
+            @include paragraph(1.8rem);
+            margin-left: 2%;
+            margin-top: 3%;
+          }
+
+          .skillsUsed {
+            margin-left: 2%;
+            margin-top: 4%;
+
+            h5 {
+              @include paragraph(1.7rem);
+              margin-right: 3%;
+              display: inline-block;
+              background-color: $lightRose;
+            }
+          }
+        }
+
+        .projectLinks {
+          margin-left: 2%;
+          padding-bottom: 5px;
+          display: flex;
+          justify-content: flex-end;
+
+          a {
+            @include subheading(1.8rem);
+            background-color: $seaGreen;
+            color: $white;
+            padding: 6px 15px;
+            margin-right: 5px;
+
+            &:hover,
+            &:focus {
+              box-shadow: inset 0 -12px $darkGreen;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Section 2B - Design Projects
+
+  .designProjects {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      margin: 2%;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .designBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $brandGreen;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    a {
+      @include subheading(2.4rem);
+      color: white;
+
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 -14px $darkGreen;
+      }
+    }
+  }
+}
+
+.devProjects.open,
+.designProjects.open {
+  display: block;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.devProjects.close,
+.designProjects.close {
+  display: none;
+}
+
+// Section 3 - Skills
+
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .subheadingDiv {
+    margin-bottom: 65px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 2%;
+    margin: 0 auto;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 8%;
+      min-width: 100px;
+      margin: 3%;
+
+      img {
+        width: 70%;
+      }
+
+      h4 {
+        @include subheading(1.4rem);
+      }
+    }
+  }
+
+  .nonTechSkills {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-self: center;
+      width: 90%;
+      padding: 2%;
+      margin-right: 5%;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 2%;
+        min-width: 100px;
+        margin: 3%;
+
+        img {
+          width: 70%;
+        }
+
+        h4 {
+          @include subheading(1.4rem);
+          line-height: 1.7rem;
+          margin-top: 4px;
+        }
+      }
+    }
+    h3 {
+      @include subheading(2.2rem);
+      font-weight: bolder;
+      line-height: 2rem;
+      margin: 15px 0 0 5px;
+      padding: 10px 7px 10px;
+      width: 30%;
+      min-width: 300px;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+// Section 5 - Contact
+
+.contactSection {
+  padding-top: 65px;
+  height: 100vh;
+  background-color: $lightRose;
+
+  .connectFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40%;
+
+    h3 {
+      @include subheading(2.2rem);
+      margin-top: 15%;
+      font-weight: bolder;
+    }
+
+    p {
+      @include paragraph(2rem);
+      margin-top: 5%;
+      width: 75%;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 5%;
+      width: 90%;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        width: 2%;
+        min-width: 60px;
+        margin: 3%;
+        margin-top: 0;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        a {
+          width: 100%;
+
+          img {
+            width: 100%;
+
+            &:hover,
+            &:focus {
+              border-bottom: 10px solid $darkGreen;
+            }
+          }
+        }
+      }
+    }
+  }
+}

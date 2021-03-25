@@ -1,0 +1,17 @@
+// Colours
+$black: #060000;
+$white: #FFFFFF;
+$lightGrey: #EFEFEF;
+$lightRose: #EDE1DF;
+$mediumRose: #D2B3AF;
+$seaGreen: #7192A3;
+$darkGreen: #124966;
+$brandGreen: #77CDBE;
+
+// Imports
+@import 'partials/variables';
+@import 'partials/setup';
+@import 'partials/header';
+@import 'partials/main';
+@import 'partials/footer';
+@import 'partials/mediaQueries'
