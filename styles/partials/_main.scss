@@ -38,19 +38,34 @@ img {
   .aboutFlex {
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
 
-    p {
-      @include paragraph(1.5rem);
-      width: 30%;
-      min-width: 300px;
-      padding: 40px 10px;
+    .aboutMe {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        @include paragraph(1.6rem);
+        line-height: 2.6rem;
+        width: 30%;
+        min-width: 350px;
+        padding: 40px 10px 5px 10px;
+
+        &:last-of-type {
+          padding-top: 10px;
+        }
+      }
     }
 
-    img {
-      width: 30%;
-      min-width: 300px;
-      margin-top: 40px;
-      margin-left: 10%;
+    .photoSteph {
+      width: 40%;
+
+      img {
+        width: 100%;
+        margin-top: 40px;
+      }
     }
   }
 }
@@ -64,7 +79,6 @@ img {
     display: flex;
     @include subheading(2.2rem);
     margin: 15px 0 20px 5px;
-    
 
     a {
       padding: 2px 7px 10px;
