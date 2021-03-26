@@ -62,6 +62,7 @@ nav {
   flex-direction: column;
   align-items: center;
   z-index: 10;
+  transition: all 0.5s ease-in-out;
 
   .menuButton {
     position: relative;
@@ -71,6 +72,7 @@ nav {
     width: 80px;
     height: 80px;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
   }
 
   .menuButtonBurger {
@@ -78,7 +80,6 @@ nav {
     height: 3px;
     background-color: $darkGreen;
     border-radius: 5px;
-    transition: all 0.5s ease-in-out;
     display: flex;
     justify-content: flex-end;
 
@@ -107,20 +108,17 @@ nav {
   // Menu animation
   .menuButton.open .menuButtonBurger {
     background-color: transparent;
-    transition: all 0.1s ease-in-out;
   }
 
   .menuButton.open {
     .menuButtonBurger {
       &::before {
         transform: rotate(90deg);
-        transition: all 0.5s ease-in-out;
         background-color: $white;
       }
 
       &::after {
         transform: translateY(-1px);
-        transition: all 0.5s ease-in-out;
         background-color: $white;
       }
     }

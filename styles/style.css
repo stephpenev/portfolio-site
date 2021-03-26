@@ -331,6 +331,8 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 nav .menuButton {
@@ -347,6 +349,8 @@ nav .menuButton {
   width: 80px;
   height: 80px;
   cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 nav .menuButtonBurger {
@@ -354,8 +358,6 @@ nav .menuButtonBurger {
   height: 3px;
   background-color: #124966;
   border-radius: 5px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,23 +393,17 @@ nav .menuButtonBurger::after {
 
 nav .menuButton.open .menuButtonBurger {
   background-color: transparent;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
 }
 
 nav .menuButton.open .menuButtonBurger::before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   background-color: #FFFFFF;
 }
 
 nav .menuButton.open .menuButtonBurger::after {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   background-color: #FFFFFF;
 }
 
@@ -488,24 +484,46 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
 }
 
-.aboutSection .aboutFlex p {
-  font-size: 1.5rem;
+.aboutSection .aboutFlex .aboutMe {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutSection .aboutFlex .aboutMe p {
+  font-size: 1.6rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 2.2rem;
+  line-height: 2.6rem;
   width: 30%;
-  min-width: 300px;
-  padding: 40px 10px;
+  min-width: 350px;
+  padding: 40px 10px 5px 10px;
 }
 
-.aboutSection .aboutFlex img {
-  width: 30%;
-  min-width: 300px;
+.aboutSection .aboutFlex .aboutMe p:last-of-type {
+  padding-top: 10px;
+}
+
+.aboutSection .aboutFlex .photoSteph {
+  width: 40%;
+}
+
+.aboutSection .aboutFlex .photoSteph img {
+  width: 100%;
   margin-top: 40px;
-  margin-left: 10%;
 }
 
 .projectsSection {
