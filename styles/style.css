@@ -513,9 +513,9 @@ img {
   font-weight: 400;
   line-height: 2.2rem;
   line-height: 2.6rem;
-  width: 30%;
-  min-width: 350px;
+  width: 80%;
   padding: 40px 10px 5px 10px;
+  margin-right: 5%;
 }
 
 .aboutSection .aboutFlex .aboutMe p:last-of-type {
@@ -528,7 +528,7 @@ img {
 }
 
 .aboutSection .aboutFlex .photoSteph {
-  width: 40%;
+  width: 25%;
 }
 
 .aboutSection .aboutFlex .photoSteph img {
@@ -1003,6 +1003,7 @@ img {
 }
 
 footer {
+  background-color: #EDE1DF;
   height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1021,4 +1022,5 @@ footer p {
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
+  color: #124966;
 }
