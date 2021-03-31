@@ -18,6 +18,11 @@ body * {
 
 a {
   text-decoration: none;
+  color: $black;
+
+  &:visited {
+    color: $black;
+  }
 }
 
 ul {
@@ -56,6 +61,10 @@ img {
         &:last-of-type {
           padding-top: 10px;
         }
+      }
+
+      a {
+        box-shadow: inset 0 -4px $brandGreen;
       }
     }
 
@@ -111,14 +120,14 @@ img {
       display: flex;
       justify-content: center;
       width: 100%;
-      height: 100vh;
+      height: 80vh;
 
       &:last-of-type {
-        height: 80vh;
+        height: 70vh;
       }
 
       .devImage {
-        width: 400px;
+        width: 500px;
         min-width: 300px;
 
         img {
@@ -127,10 +136,10 @@ img {
       }
 
       .devFlex {
-        width: 50%;
+        width: 40%;
         min-width: 300px;
         height: 250px;
-        margin-left: 25px;
+        margin-left: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -296,7 +305,7 @@ img {
   justify-content: center;
 
   .subheadingDiv {
-    margin-bottom: 65px;
+    margin-bottom: 30px;
   }
 
   ul {
@@ -304,7 +313,7 @@ img {
     justify-content: center;
     flex-wrap: wrap;
     width: 90%;
-    padding: 2%;
+    padding: 1%;
     margin: 0 auto;
 
     li {

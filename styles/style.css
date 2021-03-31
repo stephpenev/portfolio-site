@@ -461,6 +461,11 @@ body * {
 
 a {
   text-decoration: none;
+  color: #060000;
+}
+
+a:visited {
+  color: #060000;
 }
 
 ul {
@@ -515,6 +520,11 @@ img {
 
 .aboutSection .aboutFlex .aboutMe p:last-of-type {
   padding-top: 10px;
+}
+
+.aboutSection .aboutFlex .aboutMe a {
+  -webkit-box-shadow: inset 0 -4px #77CDBE;
+          box-shadow: inset 0 -4px #77CDBE;
 }
 
 .aboutSection .aboutFlex .photoSteph {
@@ -586,15 +596,15 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 100vh;
-}
-
-.projectsSection .devProjects .devProjectSingle:last-of-type {
   height: 80vh;
 }
 
+.projectsSection .devProjects .devProjectSingle:last-of-type {
+  height: 70vh;
+}
+
 .projectsSection .devProjects .devProjectSingle .devImage {
-  width: 400px;
+  width: 500px;
   min-width: 300px;
 }
 
@@ -603,10 +613,10 @@ img {
 }
 
 .projectsSection .devProjects .devProjectSingle .devFlex {
-  width: 50%;
+  width: 40%;
   min-width: 300px;
   height: 250px;
-  margin-left: 25px;
+  margin-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -799,7 +809,7 @@ img {
 }
 
 .skillsSection .subheadingDiv {
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 }
 
 .skillsSection ul {
@@ -812,7 +822,7 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 90%;
-  padding: 2%;
+  padding: 1%;
   margin: 0 auto;
 }
 
@@ -993,7 +1003,6 @@ img {
 }
 
 footer {
-  background-color: #FFFFFF;
   height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
