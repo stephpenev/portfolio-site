@@ -285,7 +285,7 @@ header .mouseDown .line {
 
 .header {
   width: 70%;
-  padding-top: 120px;
+  padding-top: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,6 +298,7 @@ header .mouseDown .line {
   width: 7%;
   max-width: 100px;
   min-width: 60px;
+  z-index: 100;
 }
 
 .header .headerText {
@@ -480,6 +481,7 @@ img {
   background-color: #EDE1DF;
   height: 90vh;
   padding-top: 65px;
+  overflow: hidden;
 }
 
 .aboutSection .aboutFlex {
@@ -533,11 +535,13 @@ img {
 
 .aboutSection .aboutFlex .photoSteph img {
   width: 100%;
+  min-width: 260px;
   margin-top: 40px;
 }
 
 .projectsSection {
   padding-top: 65px;
+  overflow: hidden;
 }
 
 .projectsSection .thirdHeadingFlex {
@@ -596,11 +600,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 80vh;
-}
-
-.projectsSection .devProjects .devProjectSingle:last-of-type {
-  height: 70vh;
+  height: 75vh;
 }
 
 .projectsSection .devProjects .devProjectSingle .devImage {
@@ -613,10 +613,6 @@ img {
 }
 
 .projectsSection .devProjects .devProjectSingle .devFlex {
-  width: 40%;
-  min-width: 300px;
-  height: 250px;
-  margin-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -627,6 +623,10 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 40%;
+  min-width: 300px;
+  height: 300px;
+  margin-left: 15px;
 }
 
 .projectsSection .devProjects .devProjectSingle .devFlex .textBox h4 {
@@ -665,6 +665,7 @@ img {
   margin-right: 3%;
   display: inline-block;
   background-color: #EDE1DF;
+  margin-top: 5px;
 }
 
 .projectsSection .devProjects .devProjectSingle .devFlex .projectLinks {
@@ -697,6 +698,7 @@ img {
 
 .projectsSection .designProjects {
   display: none;
+  overflow: hidden;
 }
 
 .projectsSection ul {
@@ -806,6 +808,8 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  margin-bottom: 5%;
 }
 
 .skillsSection .subheadingDiv {
@@ -921,8 +925,9 @@ img {
 
 .contactSection {
   padding-top: 65px;
-  height: 100vh;
+  height: 90vh;
   background-color: #EDE1DF;
+  overflow: hidden;
 }
 
 .contactSection .connectFlex {
@@ -1023,4 +1028,113 @@ footer p {
   font-weight: 400;
   line-height: 2rem;
   color: #124966;
+}
+
+@media (max-width: 850px) {
+  .header .headerText {
+    font-size: 1.5rem;
+    color: #060000;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    line-height: 4.3rem;
+    margin-left: 18%;
+    width: 35%;
+    min-width: 370px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .aboutSection {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .aboutSection {
+    padding-bottom: 3%;
+  }
+  .aboutSection .aboutFlex .aboutMe {
+    width: 50%;
+  }
+  .projectsSection .devProjects .devProjectSingle {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 1000px) {
+  .aboutSection .aboutFlex .aboutMe {
+    width: 55%;
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutSection {
+    height: auto;
+  }
+  .aboutSection .aboutFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutSection .aboutFlex .aboutMe {
+    width: 100%;
+    margin-left: 0;
+  }
+  .aboutSection .aboutFlex .aboutMe p {
+    font-size: 1.6rem;
+    color: #060000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 2.2rem;
+    line-height: 2.6rem;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  .aboutSection .aboutFlex .aboutMe p:first-of-type {
+    padding-top: 25px;
+  }
+  .aboutSection .aboutFlex .photoSteph {
+    width: 50%;
+  }
+  .aboutSection .aboutFlex .photoSteph img {
+    width: 100%;
+    min-width: 220px;
+  }
+  .projectsSection .devProjects {
+    margin: 0;
+  }
+  .projectsSection .devProjects .devProjectSingle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .projectsSection .devProjects .devProjectSingle .devImage {
+    width: 100%;
+  }
+  .projectsSection .devProjects .devProjectSingle .devImage img {
+    width: 70%;
+    min-width: 350px;
+    margin: 0 auto;
+  }
+  .projectsSection .devProjects .devProjectSingle .devFlex {
+    width: 93%;
+    height: 250px;
+    margin: 7% 0 15% 0;
+  }
 }

@@ -1,0 +1,10 @@
+@media (max-width: 850px) {
+  .header {
+  .headerText {
+    @include heading(1.5rem);
+    margin-left: 18%;
+    width: 35%;
+    min-width: 370px;
+  }
+}
+}
