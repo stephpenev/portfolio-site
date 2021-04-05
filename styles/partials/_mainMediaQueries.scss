@@ -31,6 +31,12 @@
       }
     }
   }
+  .contactSection {
+    .connectFlex {
+      margin-left: 25%;
+      margin-top: 5%;
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -88,6 +94,15 @@
           margin: 7% 0 15% 0;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contactSection {
+    .connectFlex {
+      margin-left: 20%;
+      margin-top: 10%;
     }
   }
 }

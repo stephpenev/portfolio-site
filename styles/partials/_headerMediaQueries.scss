@@ -1,10 +1,47 @@
 @media (max-width: 850px) {
   .header {
-  .headerText {
-    @include heading(1.5rem);
-    margin-left: 18%;
-    width: 35%;
-    min-width: 370px;
+    .headerText {
+      font-size: 1.5rem;
+      margin-left: 35%;
+      margin-top: 120px;
+      width: 35%;
+      min-width: 370px;
+    }
   }
 }
+
+@media (max-width: 800px) {
+  .header {
+    .headerText {
+      font-size: 1.3rem;
+      line-height: 3.5rem;
+      margin-left: 30%;
+      margin-top: 150px;
+      width: 25%;
+      min-width: 320px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    .logo img {
+      margin-left: 10%;
+      margin-top: 10%;
+    }
+    .headerText {
+      font-size: 1.2rem;
+      margin-top: 200px;
+      margin-left: 10%;
+      min-width: 310px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    .headerText {
+      margin-left: 0;
+    }
+  }
 }

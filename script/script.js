@@ -3,6 +3,7 @@
 const menuButton = document.querySelector('.menuButton');
 const navMenu = document.querySelector('.navMenu');
 const navList = document.querySelector('.navList');
+const toTop = document.querySelector(".toTop");
 let menuOpen = false;
 
 menuButton.addEventListener('click', () => {
@@ -27,7 +28,12 @@ navList.addEventListener('click', (event) => {
     const scrollTo = document.querySelector("#" + type);
     scrollTo.scrollIntoView({ behavior: "smooth" });
   }
-}); 
+});
+
+toTop.addEventListener('click', () => {
+    const scrollToTop = document.getElementById("header");
+    scrollToTop.scrollIntoView({ behavior: "smooth" });
+});
 
 // Toggling dev and design sections visible and invisible //
 
