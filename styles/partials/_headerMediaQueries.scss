@@ -1,47 +1,48 @@
 @media (max-width: 850px) {
-  .header {
+  .headerBlock {
     .headerText {
       font-size: 1.5rem;
       margin-left: 35%;
       margin-top: 120px;
       width: 35%;
-      min-width: 370px;
+      min-width: 400px;
     }
   }
 }
 
 @media (max-width: 800px) {
-  .header {
+  .headerBlock {
     .headerText {
       font-size: 1.3rem;
       line-height: 3.5rem;
       margin-left: 30%;
       margin-top: 150px;
       width: 25%;
-      min-width: 320px;
+      min-width: 330px;
     }
   }
 }
 
 @media (max-width: 500px) {
-  .header {
+  .headerBlock {
     .logo img {
       margin-left: 10%;
       margin-top: 10%;
     }
     .headerText {
       font-size: 1.2rem;
-      margin-top: 200px;
+      margin-top: 160px;
       margin-left: 10%;
-      min-width: 310px;
+      min-width: 320px;
     }
   }
 }
 
 @media (max-width: 375px) {
-  .header {
+  .headerBlock {
     .headerText {
       margin-left: 0;
+      min-width: 290px;
     }
   }
 }
