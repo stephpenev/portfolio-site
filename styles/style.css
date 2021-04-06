@@ -240,17 +240,13 @@ html {
   font-size: 62.5%;
 }
 
-header {
-  height: 100vh;
-}
-
-header .mouseDown {
+.mainHeader .mouseDown {
   position: absolute;
   left: 50%;
   top: 90%;
 }
 
-header .mouseDown .line {
+.mainHeader .mouseDown .line {
   width: 2px;
   height: 5vh;
   background: #060000;
@@ -283,12 +279,13 @@ header .mouseDown .line {
   }
 }
 
-.header {
+.headerBlock {
+  height: 100vh;
   width: 70%;
   padding-top: 7%;
 }
 
-.header .logo img {
+.headerBlock .logo img {
   width: 7%;
   height: auto;
   max-width: 100px;
@@ -296,7 +293,7 @@ header .mouseDown .line {
   z-index: 100;
 }
 
-.header .headerText {
+.headerBlock .headerText {
   font-size: 1.6rem;
   color: #060000;
   font-family: "Jost", sans-serif;
@@ -457,11 +454,6 @@ body * {
 
 a {
   text-decoration: none;
-  color: #060000;
-}
-
-a:visited {
-  color: #060000;
 }
 
 ul {
@@ -526,11 +518,11 @@ img {
 
 .aboutSection .aboutFlex .photoSteph {
   width: 25%;
+  min-width: 200px;
 }
 
 .aboutSection .aboutFlex .photoSteph img {
   width: 100%;
-  min-width: 260px;
   margin-top: 40px;
 }
 
@@ -548,24 +540,20 @@ img {
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
-  margin: 15px 0 20px 5px;
+  margin: 30px 0 20px 7px;
 }
 
-.projectsSection .thirdHeadingFlex a {
+.projectsSection .thirdHeadingFlex button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
   padding: 2px 7px 10px;
 }
 
-.projectsSection .thirdHeadingFlex a:hover, .projectsSection .thirdHeadingFlex a:focus {
-  -webkit-box-shadow: inset 0 -12px #77CDBE;
-          box-shadow: inset 0 -12px #77CDBE;
-}
-
-.projectsSection .thirdHeadingFlex a:visited, .projectsSection .thirdHeadingFlex a:active {
-  color: #060000;
-}
-
-.projectsSection .thirdHeadingFlex a:last-of-type {
-  margin-left: 45px;
+.projectsSection .thirdHeadingFlex button:last-of-type {
+  margin-left: 40px;
 }
 
 .projectsSection .underline {
@@ -584,7 +572,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 80px 0;
+  margin-top: 80px;
 }
 
 .projectsSection .devProjects .devProjectSingle {
@@ -691,8 +679,27 @@ img {
           box-shadow: inset 0 -12px #124966;
 }
 
+.projectsSection .devProjects .devProjectEven {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.projectsSection .devProjects .devProjectEven .devImage {
+  margin-left: 2%;
+}
+
+.projectsSection .devProjects .devProjectEven .devFlex {
+  margin-left: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .projectsSection .designProjects {
   display: none;
+  margin: 80px 0;
   overflow: hidden;
 }
 
@@ -1071,13 +1078,14 @@ footer p {
 
 @media (max-width: 1200px) {
   .aboutSection {
-    height: 90vh;
+    height: 85vh;
   }
 }
 
 @media (max-width: 1100px) {
   .aboutSection {
     padding-bottom: 3%;
+    height: auto;
   }
   .aboutSection .aboutFlex .aboutMe {
     width: 50%;
@@ -1136,10 +1144,7 @@ footer p {
   }
   .aboutSection .aboutFlex .photoSteph {
     width: 50%;
-  }
-  .aboutSection .aboutFlex .photoSteph img {
-    width: 100%;
-    min-width: 220px;
+    min-width: 300px;
   }
   .projectsSection .devProjects {
     margin: 0;
@@ -1152,20 +1157,23 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100vh;
+    height: 90vh;
+  }
+  .projectsSection .devProjects .devProjectSingle:first-of-type {
+    margin-top: 40px;
   }
   .projectsSection .devProjects .devProjectSingle .devImage {
     width: 100%;
   }
   .projectsSection .devProjects .devProjectSingle .devImage img {
     width: 70%;
-    min-width: 350px;
+    min-width: 300px;
     margin: 0 auto;
   }
   .projectsSection .devProjects .devProjectSingle .devFlex {
     width: 93%;
     height: 250px;
-    margin: 7% 0 15% 0;
+    margin: 10% 0 15% 0;
   }
 }
 
@@ -1174,4 +1182,35 @@ footer p {
     margin-left: 20%;
     margin-top: 10%;
   }
+  .projectLinks {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutSection .aboutFlex .aboutMe p {
+    width: 100%;
+  }
+  .aboutSection .aboutFlex .photoSteph {
+    max-width: 200px;
+  }
+  .aboutSection .aboutFlex .photoSteph img {
+    width: 100%;
+  }
+}
+
+.designHeader {
+  width: 10%;
+  padding-top: 7%;
+  height: 30vh;
+}
+
+.designHeader .designLogo {
+  width: 50%;
+  min-width: 60px;
+  max-width: 100px;
+}
+
+.designHeader .designLogo img {
+  width: 100%;
 }

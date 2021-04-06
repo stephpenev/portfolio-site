@@ -17,11 +17,6 @@ body * {
 
 a {
   text-decoration: none;
-  color: $black;
-
-  &:visited {
-    color: $black;
-  }
 }
 
 ul {
@@ -70,10 +65,10 @@ img {
 
     .photoSteph {
       width: 25%;
-      
+      min-width: 200px;
+
       img {
         width: 100%;
-        min-width: 260px;
         margin-top: 40px;
       }
     }
@@ -89,21 +84,18 @@ img {
   .thirdHeadingFlex {
     display: flex;
     @include subheading(2.2rem);
-    margin: 15px 0 20px 5px;
+    margin: 30px 0 20px 7px;
 
-    a {
+    button {
+      background: none;
+      color: inherit;
+      border: none;
+      font: inherit;
+      cursor: pointer;
       padding: 2px 7px 10px;
 
-      &:hover,
-      &:focus {
-        box-shadow: inset 0 -12px $brandGreen;
-      }
-      &:visited,
-      &:active {
-        color: $black;
-      }
       &:last-of-type {
-        margin-left: 45px;
+        margin-left: 40px;
       }
     }
   }
@@ -116,7 +108,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 80px 0;
+    margin-top: 80px;
 
     .devProjectSingle {
       display: flex;
@@ -192,12 +184,24 @@ img {
         }
       }
     }
+
+    .devProjectEven {
+      flex-direction: row-reverse;
+      .devImage {
+        margin-left: 2%;
+      }
+      .devFlex {
+        margin-left: 0;
+        align-items: flex-start;
+      }
+    }
   }
 
   // Section 2B - Design Projects
 
   .designProjects {
     display: none;
+    margin: 80px 0;
     overflow: hidden;
   }
 

@@ -1,12 +1,13 @@
 @media (max-width: 1200px) {
   .aboutSection {
-    height: 90vh;
+    height: 85vh;
   }
 }
 
 @media (max-width: 1100px) {
   .aboutSection {
     padding-bottom: 3%;
+    height: auto;
     .aboutFlex {
       .aboutMe {
         width: 50%;
@@ -64,10 +65,7 @@
 
       .photoSteph {
         width: 50%;
-        img {
-          width: 100%;
-          min-width: 220px;
-        }
+        min-width: 300px;
       }
     }
   }
@@ -78,20 +76,22 @@
       .devProjectSingle {
         flex-direction: column;
         align-items: center;
-        height: 100vh;
-
+        height: 90vh;
+        &:first-of-type {
+          margin-top: 40px;
+        }
         .devImage {
           width: 100%;
           img {
             width: 70%;
-            min-width: 350px;
+            min-width: 300px;
             margin: 0 auto;
           }
         }
         .devFlex {
           width: 93%;
           height: 250px;
-          margin: 7% 0 15% 0;
+          margin: 10% 0 15% 0;
         }
       }
     }
@@ -103,6 +103,25 @@
     .connectFlex {
       margin-left: 20%;
       margin-top: 10%;
+    }
+  }
+  .projectLinks {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutSection {
+    .aboutFlex {
+      .aboutMe p {
+        width: 100%;
+      }
+      .photoSteph {
+        max-width: 200px;
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }

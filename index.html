@@ -4,20 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steph Penev | Development & Design</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script
-      src="https://kit.fontawesome.com/412d33e412.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="./styles/style.css"/>
   </head>
   <body>
-    <header class="wrapper">
-      <div class="header" id="header">
-        <a href="#" class="logo"
-          ><img src="./assets/2020_Logo_web.png" alt="Stephanie Penev logo"
-        /></a>
+    <header class="mainHeader wrapper">
+      <div class="headerBlock" id="header">
+        <div class="logo">
+          <img src="./assets/2020_Logo_web.png" alt="Logo">
+          </div>
         <div class="headerText">
-          <h1>Hi, I’m Stephanie Penev, Front End Web Developer + Designer.</h1>
+          <h1>Hi, I’m Steph Penev, a Visual Developer and Designer based in Toronto.</h1>
         </div>
       </div>
       <div class="mouseDown">
@@ -72,10 +68,12 @@
           <h2 class="sectionHeader">Projects</h2>
         </div>
         <div class="thirdHeadingFlex">
-          <a href="#development" class="devButton underline"
-            ><h3>Development</h3></a
-          >
-          <a href="#design" class="designButton"><h3>Design</h3></a>
+          <button class="devButton underline">
+            <h3>Development</h3>
+          </button>
+          <button class="designButton">
+            <h3>Design</h3>
+          </button>
         </div>
         <div class="devProjects">
           <div class="devProjectSingle">
@@ -89,9 +87,7 @@
               <div class="textBox">
                 <h4>Adjacent</h4>
                 <p>
-                  Working in a paired group, built an app that allows music
-                  lovers to find recommended similar artists based on their
-                  search. Uses the Last.fm and AudioDB APIs.
+                  Working in a paired group, built an app that allows the user to find recommended similar artists. Uses the Last.fm and AudioDB APIs in succession.
                 </p>
                 <div class="skillsUsed">
                   <h5>Javascript</h5>
@@ -116,11 +112,11 @@
               </div>
             </div>
           </div>
-          <div class="devProjectSingle">
+          <div class="devProjectSingle devProjectEven">
             <div class="devImage">
               <img
                 src="./assets/compass-lr.png"
-                alt="A laptop with a screen preview of the Compass project app"
+                alt="A laptop with a screen preview of the Fiction Faceoff project app"
               />
             </div>
             <div class="devFlex">
@@ -157,7 +153,7 @@
             <div class="devImage">
               <img
                 src="./assets/fiction-faceoff-lr.png"
-                alt="A laptop with a screen preview of the Compass project app"
+                alt="A laptop with a screen preview of the Sanctuary Helpers responsive project"
               />
             </div>
             <div class="devFlex">
@@ -185,6 +181,42 @@
                 >
                 <a
                   href="https://github.com/N-E-S-M/fictionFaceOff"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="devProjectSingle devProjectEven">
+            <div class="devImage">
+              <img
+                src="./assets/sanctuary-lr.png"
+                alt="A laptop with a screen preview of the Sanctuary Helpers responsive project"
+              />
+            </div>
+            <div class="devFlex">
+              <div class="textBox">
+                <h4>Sanctuary Helpers</h4>
+                <p>
+                  Fully-responsive, pixel-perfect, multi-page PSD conversion completed as part of a paired project.
+                </p>
+                <div class="skillsUsed">
+                  <h5>SCSS</h5>
+                  <h5>Responsive Design</h5>
+                  <h5>Accessiblity</h5>
+                  <h5>Paired Programming</h5>
+                </div>
+              </div>
+              <div class="projectLinks">
+                <a
+                  href="https://mitch-steph.github.io/sanctuaryHelpersProjectOne/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Live</a
+                >
+                <a
+                  href="https://github.com/mitch-steph/sanctuaryHelpersProjectOne"
                   target="_blank"
                   rel="noreferrer noopener"
                   >Github</a
