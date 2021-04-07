@@ -511,9 +511,10 @@ img {
   padding-top: 10px;
 }
 
-.aboutSection .aboutFlex .aboutMe .aboutContact a {
+.aboutSection .aboutFlex .aboutMe .aboutContact {
   -webkit-box-shadow: inset 0 -6px #77CDBE;
           box-shadow: inset 0 -6px #77CDBE;
+  cursor: pointer;
 }
 
 .aboutSection .aboutFlex .photoSteph {
@@ -532,14 +533,14 @@ img {
 }
 
 .projectsSection .thirdHeadingFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 2.2rem;
   color: #060000;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 30px 0 20px 7px;
 }
 
@@ -552,7 +553,7 @@ img {
   padding: 2px 7px 10px;
 }
 
-.projectsSection .thirdHeadingFlex button:last-of-type {
+.projectsSection .thirdHeadingFlex .designButton {
   margin-left: 40px;
 }
 
@@ -1079,14 +1080,13 @@ footer p {
 
 @media (max-width: 1200px) {
   .aboutSection {
-    height: 85vh;
+    height: 100vh;
   }
 }
 
 @media (max-width: 1100px) {
   .aboutSection {
     padding-bottom: 3%;
-    height: auto;
   }
   .aboutSection .aboutFlex .aboutMe {
     width: 50%;
@@ -1176,6 +1176,11 @@ footer p {
     height: 250px;
     margin: 10% 0 15% 0;
   }
+  .projectsSection .devProjects .devProjectEven .devFlex {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1198,6 +1203,31 @@ footer p {
   .aboutSection .aboutFlex .photoSteph img {
     width: 100%;
   }
+  .projectsSection .thirdHeadingFlex {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .projectsSection .thirdHeadingFlex {
+    font-size: 2rem;
+  }
+  .projectsSection .thirdHeadingFlex .designButton {
+    margin-left: 20px;
+  }
+  .projectsSection .devProjects .devProjectSingle {
+    height: 100vh;
+  }
+  .projectsSection .devProjects .devProjectSingle .devFlex {
+    min-width: 220px;
+    margin: 10%;
+  }
+  .projectsSection .devProjects .devProjectSingle .devFlex .devImage {
+    margin-left: 0;
+  }
+  .projectsSection .devProjects .devProjectSingle .devFlex .devImage img {
+    min-width: 120px;
+  }
 }
 
 .designHeader {
@@ -1214,4 +1244,77 @@ footer p {
 
 .designHeader .designLogo img {
   width: 100%;
+}
+
+.sectionText {
+  width: 70%;
+  height: 40vh;
+  margin: 0 auto;
+}
+
+.sectionText h1 {
+  font-size: 3.5rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 4.3rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sectionText h3 {
+  font-size: 2rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 2.8rem;
+}
+
+.contentBlock {
+  margin-bottom: 10%;
+  /* cell number */
+}
+
+.contentBlock .description h2 {
+  font-size: 2.4rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 10px;
+  line-height: 2.5rem;
+}
+
+.contentBlock .description p {
+  font-size: 1.8rem;
+  color: #060000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-top: 4%;
+}
+
+.contentBlock .carousel {
+  background: #eee;
+}
+
+.contentBlock .carousel-cell {
+  width: 80%;
+  height: 300px;
+  margin-right: 10px;
+  background: #8c8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+.contentBlock .carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 300px;
+  font-size: 80px;
+  color: white;
 }

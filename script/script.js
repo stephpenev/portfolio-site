@@ -4,6 +4,7 @@ const menuButton = document.querySelector('.menuButton');
 const navMenu = document.querySelector('.navMenu');
 const navList = document.querySelector('.navList');
 const toTop = document.querySelector(".toTop");
+const toContact = document.querySelector(".aboutContact");
 let menuOpen = false;
 
 menuButton.addEventListener('click', () => {
@@ -34,6 +35,11 @@ toTop.addEventListener('click', () => {
     const scrollToTop = document.getElementById("header");
     scrollToTop.scrollIntoView({ behavior: "smooth" });
 });
+
+toContact.addEventListener('click', () => {
+  const scrollToContact = document.getElementById("contact");
+  scrollToContact.scrollIntoView({ behavior: "smooth" });
+})
 
 // Toggling dev and design sections visible and invisible //
 

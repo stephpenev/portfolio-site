@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First Gulf | Signage</title>
-    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <header class="wrapper">
@@ -13,7 +17,7 @@
         <div class="designLogo">
           <a href="./index.html">
             <img src="./assets/2020_Logo_web.png" alt="Stephanie Penev logo"
-        /></a>
+          /></a>
         </div>
       </div>
       <nav class="navMenu">
@@ -21,28 +25,86 @@
           <div class="menuButtonBurger"></div>
         </div>
         <ul class="navList">
-          <li class="about" tabindex="0">About</li>
-          <li class="projects" tabindex="0">Projects</li>
-          <li class="skills" tabindex="0">Skills</li>
-          <li class="contact" tabindex="0">Contact</li>
+          <a href="index.html#about"
+            ><li class="about" tabindex="0">About</li></a
+          >
+          <a href="index.html#projects"
+            ><li class="projects" tabindex="0">Projects</li></a
+          >
+          <a href="index.html#skills"
+            ><li class="skills" tabindex="0">Skills</li></a
+          >
+          <a href="index.html/contact"
+            ><li class="contact" tabindex="0">Contact</li></a
+          >
         </ul>
       </nav>
     </header>
     <main class="wrapper">
       <div class="sectionText">
         <h1>First Gulf | Signage</h1>
-        <h3>Sector and...</h3>
+        <h3>
+          Sector and standalone project signage for the First Gulf portfolio of
+          properties, ranging across office, retail, land and industrial end
+          uses.
+        </h3>
       </div>
-      <div class="retailProgram">
-        <h2></h2>
-        <h2></h2>
-        <p></p>
-        <div class="slider">
-
+      <div class="contentBlock">
+        <div class="description">
+          <h2>Suburban Retail Centres, Ontario</h2>
+          <p>
+            Developed and implemented a new signage program for First Gulf’s
+            suburban properties, throughout the GTA.
+          </p>
         </div>
+        <div class="img">
+          <img src="#" alt="" />
+        </div>
+        <div class="slider"></div>
+      </div>
+      <div class="contentBlock">
+        <div class="description">
+          <h2>276 King Street West (at Ed Mirvish Way), Toronto</h2>
+          <p>
+            Developed and implemented a new signage program for First Gulf’s
+            suburban properties, throughout the GTA.
+          </p>
+        </div>
+        <div class="slider"></div>
+      </div>
+      <div class="contentBlock">
+        <div class="description">
+          <h2>
+            The Globe and Mail Centre at King and Berkeley Streets, Toronto
+          </h2>
+          <p>
+            Design of standalone leasing signage for the largest retail unit at
+            The Globe and Mail Centre. The building is home to the headquarters
+            of The Globe and Mail, LoyaltyOne, Yellow Pages Media, and KPMB
+            Architects. The unit has since been leased.
+          </p>
+        </div>
+        <div class="slider"></div>
+      </div>
+      <div class="contentBlock">
+        <div class="description">
+          <h2>Suburban Office Developments, Ontario</h2>
+          <p>
+            Developed leasing signage for suburban office developments across
+            the GTA.
+          </p>
+        </div>
+        <!-- <div class="carousel" data-flickity="{ "freeScroll": true, "wrapAround": true }'>
+          <div class="carousel-cell"><img src="#" alt=""></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+          <div class="carousel-cell"></div>
+        </div> -->
       </div>
     </main>
     <footer></footer>
     <script src="./script/script.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>

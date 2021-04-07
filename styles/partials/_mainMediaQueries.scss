@@ -1,20 +1,18 @@
 @media (max-width: 1200px) {
   .aboutSection {
-    height: 85vh;
+    height: 100vh;
   }
 }
 
 @media (max-width: 1100px) {
   .aboutSection {
     padding-bottom: 3%;
-    height: auto;
     .aboutFlex {
       .aboutMe {
         width: 50%;
       }
     }
   }
-
   .projectsSection {
     .devProjects {
       .devProjectSingle {
@@ -94,6 +92,11 @@
           margin: 10% 0 15% 0;
         }
       }
+      .devProjectEven {
+        .devFlex {
+          align-items: flex-end;
+        }
+      }
     }
   }
 }
@@ -120,6 +123,37 @@
         max-width: 200px;
         img {
           width: 100%;
+        }
+      }
+    }
+  }
+  .projectsSection {
+    .thirdHeadingFlex {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .projectsSection {
+    .thirdHeadingFlex {
+      font-size: 2rem;
+      .designButton {
+        margin-left: 20px;
+      }
+    }
+    .devProjects {
+      .devProjectSingle {
+        height: 100vh;
+        .devFlex {
+          min-width: 220px;
+          margin: 10%;
+          .devImage {
+            margin-left: 0;
+            img {
+              min-width: 120px;
+            }
+          }
         }
       }
     }
