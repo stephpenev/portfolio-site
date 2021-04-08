@@ -388,7 +388,7 @@ img {
 
 .contactSection {
   padding-top: 65px;
-  height: 90vh;
+  height: 80vh;
   background-color: $lightRose;
   overflow: hidden;
 
@@ -446,5 +446,21 @@ img {
         }
       }
     }
+  }
+}
+
+// Section 6 - To Top button
+.topButton {
+  height: 10vh;
+  background: $lightRose;
+  .topFlex {
+    display: flex;
+    justify-content: flex-end;
+    p {
+    color: $black;
+    font-size: 5rem;
+    cursor: pointer;
+    padding: 3px;
+  }
   }
 }

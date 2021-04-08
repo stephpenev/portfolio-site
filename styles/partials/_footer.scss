@@ -7,7 +7,6 @@ footer {
 
   p {
     @include subheading(1.8rem);
-    color: $darkGreen;
-    cursor: pointer;
+    color: $black;
   }
 }

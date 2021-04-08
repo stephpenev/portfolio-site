@@ -928,7 +928,7 @@ img {
 
 .contactSection {
   padding-top: 65px;
-  height: 90vh;
+  height: 80vh;
   background-color: #EDE1DF;
   overflow: hidden;
 }
@@ -1013,6 +1013,27 @@ img {
   border-bottom: 10px solid #124966;
 }
 
+.topButton {
+  height: 10vh;
+  background: #EDE1DF;
+}
+
+.topButton .topFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.topButton .topFlex p {
+  color: #060000;
+  font-size: 5rem;
+  cursor: pointer;
+  padding: 3px;
+}
+
 footer {
   background-color: #EDE1DF;
   height: 5vh;
@@ -1033,8 +1054,7 @@ footer p {
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
-  color: #124966;
-  cursor: pointer;
+  color: #060000;
 }
 
 @media (max-width: 850px) {
@@ -1262,6 +1282,11 @@ footer p {
   margin-top: 20px;
 }
 
+.sectionText h1 span {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
 .sectionText h3 {
   font-size: 2rem;
   color: #060000;
@@ -1274,47 +1299,160 @@ footer p {
 }
 
 .contentBlock {
-  margin-bottom: 10%;
-  /* cell number */
+  margin-bottom: 7%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #060000;
 }
 
 .contentBlock .description h2 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   color: #060000;
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
   margin-bottom: 10px;
-  line-height: 2.5rem;
+  line-height: 2.7rem;
 }
 
 .contentBlock .description p {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: #060000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 2.2rem;
-  margin-top: 4%;
+  margin: 2% 0 3%;
+}
+
+.contentBlock h3 {
+  font-size: 2rem;
+  color: #060000;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 40px 0 20px;
+  padding-left: 7px;
+  border-left: 6px solid #77CDBE;
+}
+
+.contentBlock img {
+  width: 100%;
 }
 
 .contentBlock .carousel {
-  background: #eee;
+  background: #EFEFEF;
+  width: 100%;
 }
 
-.contentBlock .carousel-cell {
-  width: 80%;
-  height: 300px;
-  margin-right: 10px;
-  background: #8c8;
+.contentBlock .carousel .carouselCell {
+  width: 90%;
+  height: auto;
   border-radius: 5px;
-  counter-increment: gallery-cell;
 }
 
-.contentBlock .carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 300px;
-  font-size: 80px;
-  color: white;
+.contentBlock .carousel .carouselCell img {
+  width: 100%;
+}
+
+.contentBlock .carouselTop {
+  margin-bottom: 7%;
+}
+
+.last {
+  border-bottom: none;
+  margin-bottom: 2% !important;
+}
+
+.projectTopButton {
+  background: #FFFFFF;
+  height: 10vh;
+}
+
+.projectTopButton .topFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.projectTopButton .topFlex p {
+  color: #060000;
+  font-size: 5rem;
+  cursor: pointer;
+  padding: 3px;
+  font-weight: lighter;
+}
+
+.projectFooter {
+  background: #FFFFFF;
+}
+
+@media (max-width: 1000px) {
+  .contentBlock {
+    margin-bottom: 10%;
+    padding-bottom: calc(10% - 3vw);
+  }
+  .contentBlock .description p {
+    margin: 3% 0 4%;
+  }
+  .contentBlock .carouselTop {
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .contentBlock {
+    margin-bottom: 12%;
+    padding-bottom: calc(12% - 3vw);
+  }
+  .contentBlock .description p {
+    margin: 3% 0 5%;
+  }
+  .contentBlock .carouselTop {
+    margin-bottom: 14%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sectionText {
+    width: 100%;
+    height: 45vh;
+    padding-top: 5%;
+  }
+  .contentBlock {
+    margin-bottom: 14%;
+    padding-bottom: calc(18% - 3vw);
+  }
+  .contentBlock .description p {
+    margin-top: 5% 0;
+  }
+  .projectTopButton .topFlex p {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .sectionText {
+    height: 50vh;
+    padding-top: 8%;
+  }
+  .sectionText h1 {
+    font-size: 3rem;
+  }
+  .contentBlock .description h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    line-height: 2.7rem;
+  }
+  .contentBlock h3 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .sectionText {
+    height: 60vh;
+    padding-top: 10%;
+  }
 }

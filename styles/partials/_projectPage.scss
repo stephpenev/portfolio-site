@@ -1,0 +1,109 @@
+// Header
+
+.designHeader {
+  width: 10%;
+  padding-top: 7%;
+  height: 30vh;
+
+  .designLogo {
+    width: 50%;
+    min-width: 60px;
+    max-width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Main
+
+.sectionText {
+  width: 70%;
+  height: 40vh;
+  margin: 0 auto;
+  h1 {
+    @include heading(3.5rem);
+    text-align: center;
+    margin-top: 20px;
+
+    span {
+      margin-right: 1%;
+      margin-left: 1%;
+    }
+  }
+
+  h3 {
+    @include subheading(2rem);
+    text-align: center;
+    margin-top: 40px;
+    line-height: 2.8rem;
+  }
+}
+
+.contentBlock {
+  margin-bottom: 7%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid $black;
+  .description {
+    h2 {
+      @include subheading(2.6rem);
+      margin-bottom: 10px;
+      line-height: 2.7rem;
+    }
+    p {
+      @include paragraph(1.7rem);
+      margin: 2% 0 3%;
+    }
+  }
+  h3 {
+    @include subheading(2rem);
+    margin: 40px 0 20px;
+    padding-left: 7px;
+    border-left: 6px solid $brandGreen;
+  }
+  img {
+    width: 100%;
+  }
+  .carousel {
+    background: $lightGrey;
+    width: 100%;
+    .carouselCell {
+      width: 90%;
+      height: auto;
+      border-radius: 5px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .carouselTop {
+    margin-bottom: 7%;
+  }
+}
+
+.last {
+  border-bottom: none;
+  margin-bottom: 2% !important;
+}
+
+// To Top button
+.projectTopButton {
+  background: $white;
+  height: 10vh;
+  .topFlex {
+    display: flex;
+    justify-content: flex-end;
+    p {
+    color: $black;
+    font-size: 5rem;
+    cursor: pointer;
+    padding: 3px;
+    font-weight: lighter;
+  }
+  }
+}
+
+// Project page Footer
+.projectFooter {
+  background: $white;
+}
