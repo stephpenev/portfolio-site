@@ -7,6 +7,8 @@ const toTop = document.querySelector(".toTop");
 const toContact = document.querySelector(".aboutContact");
 let menuOpen = false;
 
+console.log(`~~ Designed + Developed by Stephanie Penev ~~`);
+
 menuButton.addEventListener('click', () => {
   if(!menuOpen) {
     menuButton.classList.add('open');

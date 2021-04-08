@@ -1,7 +1,6 @@
 @media (max-width: 1000px) {
   .contentBlock {
     margin-bottom: 10%;
-    padding-bottom: calc(10% - 3vw);
     .description {
       p {
         margin: 3% 0 4%;
@@ -16,7 +15,6 @@
 @media (max-width: 800px) {
   .contentBlock {
     margin-bottom: 12%;
-    padding-bottom: calc(12% - 3vw);
     .description {
       p {
         margin: 3% 0 5%;
@@ -36,20 +34,19 @@
   }
   .contentBlock {
     margin-bottom: 14%;
-    padding-bottom: calc(18% - 3vw);
     .description {
       p {
-        margin-top: 5% 0;
+        margin: 4% 0 10%;
       }
     }
   }
   .projectTopButton {
-  .topFlex {
-    p {
-    font-size: 4rem;
+    .topFlex {
+      p {
+        font-size: 4rem;
+      }
+    }
   }
-  }
-}
 }
 
 @media (max-width: 500px) {
@@ -59,24 +56,52 @@
     h1 {
       font-size: 3rem;
     }
+    .projectAbout {
+      width: 100%;
+    }
   }
-  .contentBlock {
-    .description {
-      h2 {
-        font-size: 2.2rem;
-        margin-bottom: 10px;
-        line-height: 2.7rem;
+  .designHeaderBlock {
+    .designLogo {
+      margin-left: 8%;
+      margin-top: 10%;
+      min-width: 50px;
+      img {
+        min-width: 50px;
       }
     }
-    h3 {
+    .contentBlock {
+      padding-bottom: 12%;
+      .description {
+        h2 {
+          font-size: 2.2rem;
+          margin-bottom: 10px;
+          line-height: 2.7rem;
+        }
+      }
+      h3 {
         font-size: 1.9rem;
       }
+    }
   }
-}
 
-@media (max-width: 400px) {
-  .sectionText {
-    height: 60vh;
-    padding-top: 10%;
+  @media (max-width: 400px) {
+    .sectionText {
+      height: 60vh;
+      padding-top: 10%;
+      h1 {
+      font-size: 2.8rem;
+    }
+    }
+    .contentBlock {
+      padding-bottom: 14%;
+      .description {
+        h2 {
+          margin-bottom: 12px;
+        }
+        p {
+          margin-bottom: 10%;
+        }
+      }
+    }
   }
 }

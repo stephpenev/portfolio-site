@@ -25,9 +25,13 @@
 
 @media (max-width: 500px) {
   .headerBlock {
-    .logo img {
-      margin-left: 10%;
+    .logo {
+      margin-left: 8%;
       margin-top: 10%;
+      min-width: 50px;
+      img {
+        min-width: 50px;
+      }
     }
     .headerText {
       font-size: 1.2rem;

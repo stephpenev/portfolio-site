@@ -111,6 +111,12 @@
   .projectLinks {
     margin-top: 15px;
   }
+  .topButton {
+  .topFlex {
+    p {
+    font-size: 4rem;
+  }
+  }
 }
 
 @media (max-width: 500px) {
@@ -158,4 +164,5 @@
       }
     }
   }
+}
 }

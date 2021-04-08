@@ -240,6 +240,10 @@ html {
   font-size: 62.5%;
 }
 
+.mainHeader {
+  height: 100vh;
+}
+
 .mainHeader .mouseDown {
   position: absolute;
   left: 50%;
@@ -280,17 +284,20 @@ html {
 }
 
 .headerBlock {
-  height: 100vh;
   width: 70%;
   padding-top: 7%;
 }
 
-.headerBlock .logo img {
-  width: 7%;
-  height: auto;
+.headerBlock .logo {
+  width: 6%;
   max-width: 100px;
   min-width: 60px;
-  z-index: 100;
+}
+
+.headerBlock .logo img {
+  width: 100%;
+  max-width: 100px;
+  min-width: 60px;
 }
 
 .headerBlock .headerText {
@@ -1028,7 +1035,7 @@ img {
 }
 
 .topButton .topFlex p {
-  color: #060000;
+  color: #124966;
   font-size: 5rem;
   cursor: pointer;
   padding: 3px;
@@ -1079,9 +1086,13 @@ footer p {
 }
 
 @media (max-width: 500px) {
-  .headerBlock .logo img {
-    margin-left: 10%;
+  .headerBlock .logo {
+    margin-left: 8%;
     margin-top: 10%;
+    min-width: 50px;
+  }
+  .headerBlock .logo img {
+    min-width: 50px;
   }
   .headerBlock .headerText {
     font-size: 1.2rem;
@@ -1211,9 +1222,12 @@ footer p {
   .projectLinks {
     margin-top: 15px;
   }
+  .topButton .topFlex p {
+    font-size: 4rem;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) and (max-width: 500px) {
   .aboutSection .aboutFlex .aboutMe p {
     width: 100%;
   }
@@ -1228,7 +1242,7 @@ footer p {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 600px) and (max-width: 390px) {
   .projectsSection .thirdHeadingFlex {
     font-size: 2rem;
   }
@@ -1250,24 +1264,26 @@ footer p {
   }
 }
 
-.designHeader {
-  width: 10%;
+.designHeaderBlock {
+  width: 70%;
   padding-top: 7%;
   height: 30vh;
 }
 
-.designHeader .designLogo {
-  width: 50%;
-  min-width: 60px;
+.designHeaderBlock .designLogo {
+  width: 6%;
   max-width: 100px;
+  min-width: 60px;
 }
 
-.designHeader .designLogo img {
+.designHeaderBlock .designLogo img {
   width: 100%;
+  max-width: 100px;
+  min-width: 60px;
 }
 
 .sectionText {
-  width: 70%;
+  width: 100%;
   height: 40vh;
   margin: 0 auto;
 }
@@ -1278,6 +1294,7 @@ footer p {
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 4.3rem;
+  font-weight: bolder;
   text-align: center;
   margin-top: 20px;
 }
@@ -1287,7 +1304,12 @@ footer p {
   margin-left: 1%;
 }
 
-.sectionText h3 {
+.sectionText .projectAbout {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.sectionText .projectAbout h3 {
   font-size: 2rem;
   color: #060000;
   font-family: "Jost", sans-serif;
@@ -1300,7 +1322,7 @@ footer p {
 
 .contentBlock {
   margin-bottom: 7%;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
   border-bottom: 1px solid #060000;
 }
 
@@ -1312,6 +1334,7 @@ footer p {
   line-height: 2rem;
   margin-bottom: 10px;
   line-height: 2.7rem;
+  font-weight: bolder;
 }
 
 .contentBlock .description p {
@@ -1321,6 +1344,17 @@ footer p {
   font-weight: 400;
   line-height: 2.2rem;
   margin: 2% 0 3%;
+}
+
+.contentBlock .description p a {
+  color: #060000;
+  -webkit-box-shadow: inset 0 -6px #77CDBE;
+          box-shadow: inset 0 -6px #77CDBE;
+  cursor: pointer;
+}
+
+.contentBlock .description p a:visited {
+  color: #060000;
 }
 
 .contentBlock h3 {
@@ -1334,12 +1368,19 @@ footer p {
   border-left: 6px solid #77CDBE;
 }
 
-.contentBlock img {
+.contentBlock .img {
   width: 100%;
 }
 
+.contentBlock .img img {
+  width: 100%;
+}
+
+.contentBlock .subheadingSpecial {
+  margin-top: 10%;
+}
+
 .contentBlock .carousel {
-  background: #EFEFEF;
   width: 100%;
 }
 
@@ -1377,7 +1418,7 @@ footer p {
 }
 
 .projectTopButton .topFlex p {
-  color: #060000;
+  color: #124966;
   font-size: 5rem;
   cursor: pointer;
   padding: 3px;
@@ -1391,7 +1432,6 @@ footer p {
 @media (max-width: 1000px) {
   .contentBlock {
     margin-bottom: 10%;
-    padding-bottom: calc(10% - 3vw);
   }
   .contentBlock .description p {
     margin: 3% 0 4%;
@@ -1404,7 +1444,6 @@ footer p {
 @media (max-width: 800px) {
   .contentBlock {
     margin-bottom: 12%;
-    padding-bottom: calc(12% - 3vw);
   }
   .contentBlock .description p {
     margin: 3% 0 5%;
@@ -1422,10 +1461,9 @@ footer p {
   }
   .contentBlock {
     margin-bottom: 14%;
-    padding-bottom: calc(18% - 3vw);
   }
   .contentBlock .description p {
-    margin-top: 5% 0;
+    margin: 4% 0 10%;
   }
   .projectTopButton .topFlex p {
     font-size: 4rem;
@@ -1440,19 +1478,45 @@ footer p {
   .sectionText h1 {
     font-size: 3rem;
   }
-  .contentBlock .description h2 {
+  .sectionText .projectAbout {
+    width: 100%;
+  }
+  .designHeaderBlock .designLogo {
+    margin-left: 8%;
+    margin-top: 10%;
+    min-width: 50px;
+  }
+  .designHeaderBlock .designLogo img {
+    min-width: 50px;
+  }
+  .designHeaderBlock .contentBlock {
+    padding-bottom: 12%;
+  }
+  .designHeaderBlock .contentBlock .description h2 {
     font-size: 2.2rem;
     margin-bottom: 10px;
     line-height: 2.7rem;
   }
-  .contentBlock h3 {
+  .designHeaderBlock .contentBlock h3 {
     font-size: 1.9rem;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) and (max-width: 400px) {
   .sectionText {
     height: 60vh;
     padding-top: 10%;
+  }
+  .sectionText h1 {
+    font-size: 2.8rem;
+  }
+  .contentBlock {
+    padding-bottom: 14%;
+  }
+  .contentBlock .description h2 {
+    margin-bottom: 12px;
+  }
+  .contentBlock .description p {
+    margin-bottom: 10%;
   }
 }
