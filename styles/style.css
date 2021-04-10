@@ -1376,6 +1376,11 @@ footer p {
   width: 100%;
 }
 
+.contentBlock .gif {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .contentBlock .subheadingSpecial {
   margin-top: 10%;
 }
@@ -1403,7 +1408,6 @@ footer p {
 }
 
 .contentBlock .imageListThree {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1413,7 +1417,6 @@ footer p {
 }
 
 .contentBlock .imageListThree li {
-  width: 380px;
   margin-right: 20px;
 }
 
@@ -1528,6 +1531,50 @@ footer p {
   .contentBlock .carouselTop {
     margin-bottom: 14%;
   }
+  .contentBlock .imageListThree,
+  .contentBlock .imageListTwo {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contentBlock .imageListThree li,
+  .contentBlock .imageListTwo li {
+    max-width: 380px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .contentBlock .imageListThree li:first-of-type,
+  .contentBlock .imageListTwo li:first-of-type {
+    margin-top: 5%;
+  }
+  .contentBlock .imageListTwo li {
+    width: 100%;
+  }
+  .contentBlock .imageListFive {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .contentBlock .imageListFive li {
+    width: 170px;
+    margin-right: 0;
+    margin: 10px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1541,6 +1588,9 @@ footer p {
   }
   .contentBlock .description p {
     margin: 4% 0 10%;
+  }
+  .contentBlock .subheadingSuperSpecial {
+    margin-top: 10%;
   }
   .projectTopButton .topFlex p {
     font-size: 4rem;
@@ -1566,15 +1616,15 @@ footer p {
   .designHeaderBlock .designLogo img {
     min-width: 50px;
   }
-  .designHeaderBlock .contentBlock {
+  .contentBlock {
     padding-bottom: 12%;
   }
-  .designHeaderBlock .contentBlock .description h2 {
+  .contentBlock .description h2 {
     font-size: 2.2rem;
     margin-bottom: 10px;
     line-height: 2.7rem;
   }
-  .designHeaderBlock .contentBlock h3 {
+  .contentBlock h3 {
     font-size: 1.9rem;
   }
 }
