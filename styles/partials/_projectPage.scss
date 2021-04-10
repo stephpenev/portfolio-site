@@ -89,6 +89,9 @@
   .subheadingSpecial {
     margin-top: 10%;
   }
+  .subheadingSuperSpecial {
+    margin-top: 5%;
+  }
   .carousel {
     width: 100%;
     .carouselCell {
@@ -103,11 +106,59 @@
   .carouselTop {
     margin-bottom: 7%;
   }
+  .imageListThree {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 380px;
+      margin-right: 20px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .imageListFive {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 200px;
+      margin-right: 20px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .imageListTwo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 50%;
+      margin-right: 25px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .last {
   border-bottom: none;
   margin-bottom: 2% !important;
+}
+.reduced {
+  padding-bottom: 2%;
 }
 
 // To Top button
