@@ -1346,6 +1346,10 @@ footer p {
   margin: 2% 0 3%;
 }
 
+.contentBlock .description p:last-of-type {
+  margin-top: 0;
+}
+
 .contentBlock .description p a {
   color: #060000;
   -webkit-box-shadow: inset 0 -6px #77CDBE;
@@ -1374,6 +1378,41 @@ footer p {
 
 .contentBlock .img img {
   width: 100%;
+}
+
+.contentBlock .bknLogo {
+  width: 100%;
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5%;
+}
+
+.contentBlock .bknLogo:last-of-type {
+  margin-top: 10%;
+}
+
+.contentBlock .bknLogo img {
+  width: 25%;
+  min-width: 200px;
+}
+
+.contentBlock .halfImg {
+  width: 50%;
+  min-width: 200px;
+  margin-top: 5%;
+}
+
+.contentBlock .halfImg img {
+  min-width: 200px;
+}
+
+.contentBlock .lastImg {
+  margin-top: 5%;
 }
 
 .contentBlock .gif {
@@ -1514,7 +1553,7 @@ footer p {
     margin-bottom: 10%;
   }
   .contentBlock .description p {
-    margin: 3% 0 4%;
+    margin: 3% 0 3% 0;
   }
   .contentBlock .carouselTop {
     margin-bottom: 10%;
@@ -1526,7 +1565,7 @@ footer p {
     margin-bottom: 12%;
   }
   .contentBlock .description p {
-    margin: 3% 0 5%;
+    margin: 3% 0;
   }
   .contentBlock .carouselTop {
     margin-bottom: 14%;
@@ -1587,7 +1626,7 @@ footer p {
     margin-bottom: 14%;
   }
   .contentBlock .description p {
-    margin: 4% 0 10%;
+    margin: 4% 0 6%;
   }
   .contentBlock .subheadingSuperSpecial {
     margin-top: 10%;

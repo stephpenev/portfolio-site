@@ -64,6 +64,9 @@
     p {
       @include paragraph(1.7rem);
       margin: 2% 0 3%;
+      &:last-of-type {
+        margin-top: 0;
+      }
       a {
         color: $black;
         box-shadow: inset 0 -6px $brandGreen;
@@ -85,6 +88,31 @@
     img {
       width: 100%;
     }
+  }
+  .bknLogo {
+    width: 100%;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    &:last-of-type {
+      margin-top: 10%;
+    }
+    img {
+      width: 25%;
+      min-width: 200px;
+    }
+  }
+  .halfImg {
+    width: 50%;
+    min-width: 200px;
+    margin-top: 5%;
+    img {
+      min-width: 200px;
+    }
+  }
+  .lastImg {
+    margin-top: 5%;
   }
   .gif {
     width: 80%;
