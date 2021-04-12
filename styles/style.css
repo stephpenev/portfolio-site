@@ -1346,6 +1346,10 @@ footer p {
   margin: 2% 0 3%;
 }
 
+.contentBlock .description p:last-of-type {
+  margin-top: 0;
+}
+
 .contentBlock .description p a {
   color: #060000;
   -webkit-box-shadow: inset 0 -6px #77CDBE;
@@ -1376,8 +1380,52 @@ footer p {
   width: 100%;
 }
 
+.contentBlock .bknLogo {
+  width: 100%;
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5%;
+}
+
+.contentBlock .bknLogo:last-of-type {
+  margin-top: 10%;
+}
+
+.contentBlock .bknLogo img {
+  width: 25%;
+  min-width: 200px;
+}
+
+.contentBlock .halfImg {
+  width: 50%;
+  min-width: 200px;
+  margin-top: 5%;
+}
+
+.contentBlock .halfImg img {
+  min-width: 200px;
+}
+
+.contentBlock .lastImg {
+  margin-top: 5%;
+}
+
+.contentBlock .gif {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .contentBlock .subheadingSpecial {
   margin-top: 10%;
+}
+
+.contentBlock .subheadingSuperSpecial {
+  margin-top: 5%;
 }
 
 .contentBlock .carousel {
@@ -1398,9 +1446,80 @@ footer p {
   margin-bottom: 7%;
 }
 
+.contentBlock .imageListThree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contentBlock .imageListThree li {
+  margin-right: 20px;
+}
+
+.contentBlock .imageListThree li:last-of-type {
+  margin-right: 0;
+}
+
+.contentBlock .imageListThree li img {
+  width: 100%;
+}
+
+.contentBlock .imageListFive {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contentBlock .imageListFive li {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.contentBlock .imageListFive li:last-of-type {
+  margin-right: 0;
+}
+
+.contentBlock .imageListFive li img {
+  width: 100%;
+}
+
+.contentBlock .imageListTwo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contentBlock .imageListTwo li {
+  width: 50%;
+  margin-right: 25px;
+}
+
+.contentBlock .imageListTwo li:last-of-type {
+  margin-right: 0;
+}
+
+.contentBlock .imageListTwo li img {
+  width: 100%;
+}
+
 .last {
   border-bottom: none;
   margin-bottom: 2% !important;
+}
+
+.reduced {
+  padding-bottom: 2%;
 }
 
 .projectTopButton {
@@ -1434,7 +1553,7 @@ footer p {
     margin-bottom: 10%;
   }
   .contentBlock .description p {
-    margin: 3% 0 4%;
+    margin: 3% 0 3% 0;
   }
   .contentBlock .carouselTop {
     margin-bottom: 10%;
@@ -1446,10 +1565,54 @@ footer p {
     margin-bottom: 12%;
   }
   .contentBlock .description p {
-    margin: 3% 0 5%;
+    margin: 3% 0;
   }
   .contentBlock .carouselTop {
     margin-bottom: 14%;
+  }
+  .contentBlock .imageListThree,
+  .contentBlock .imageListTwo {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contentBlock .imageListThree li,
+  .contentBlock .imageListTwo li {
+    max-width: 380px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .contentBlock .imageListThree li:first-of-type,
+  .contentBlock .imageListTwo li:first-of-type {
+    margin-top: 5%;
+  }
+  .contentBlock .imageListTwo li {
+    width: 100%;
+  }
+  .contentBlock .imageListFive {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .contentBlock .imageListFive li {
+    width: 170px;
+    margin-right: 0;
+    margin: 10px;
   }
 }
 
@@ -1463,7 +1626,10 @@ footer p {
     margin-bottom: 14%;
   }
   .contentBlock .description p {
-    margin: 4% 0 10%;
+    margin: 4% 0 6%;
+  }
+  .contentBlock .subheadingSuperSpecial {
+    margin-top: 10%;
   }
   .projectTopButton .topFlex p {
     font-size: 4rem;
@@ -1489,15 +1655,15 @@ footer p {
   .designHeaderBlock .designLogo img {
     min-width: 50px;
   }
-  .designHeaderBlock .contentBlock {
+  .contentBlock {
     padding-bottom: 12%;
   }
-  .designHeaderBlock .contentBlock .description h2 {
+  .contentBlock .description h2 {
     font-size: 2.2rem;
     margin-bottom: 10px;
     line-height: 2.7rem;
   }
-  .designHeaderBlock .contentBlock h3 {
+  .contentBlock h3 {
     font-size: 1.9rem;
   }
 }

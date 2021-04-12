@@ -3,7 +3,7 @@
     margin-bottom: 10%;
     .description {
       p {
-        margin: 3% 0 4%;
+        margin: 3% 0 3% 0;
       }
     }
     .carouselTop {
@@ -17,11 +17,41 @@
     margin-bottom: 12%;
     .description {
       p {
-        margin: 3% 0 5%;
+        margin: 3% 0;
       }
     }
     .carouselTop {
       margin-bottom: 14%;
+    }
+    .imageListThree,
+    .imageListTwo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        max-width: 380px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        &:first-of-type {
+          margin-top: 5%;
+        }
+      }
+    }
+    .imageListTwo li {
+      width: 100%;
+    }
+    .imageListFive {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+      margin: 0 auto;
+      li {
+        width: 170px;
+        margin-right: 0;
+        margin: 10px;
+      }
     }
   }
 }
@@ -36,8 +66,11 @@
     margin-bottom: 14%;
     .description {
       p {
-        margin: 4% 0 10%;
+        margin: 4% 0 6%;
       }
+    }
+    .subheadingSuperSpecial {
+      margin-top: 10%;
     }
   }
   .projectTopButton {
@@ -69,18 +102,18 @@
         min-width: 50px;
       }
     }
-    .contentBlock {
-      padding-bottom: 12%;
-      .description {
-        h2 {
-          font-size: 2.2rem;
-          margin-bottom: 10px;
-          line-height: 2.7rem;
-        }
+  }
+  .contentBlock {
+    padding-bottom: 12%;
+    .description {
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        line-height: 2.7rem;
       }
-      h3 {
-        font-size: 1.9rem;
-      }
+    }
+    h3 {
+      font-size: 1.9rem;
     }
   }
 
@@ -89,8 +122,8 @@
       height: 60vh;
       padding-top: 10%;
       h1 {
-      font-size: 2.8rem;
-    }
+        font-size: 2.8rem;
+      }
     }
     .contentBlock {
       padding-bottom: 14%;
