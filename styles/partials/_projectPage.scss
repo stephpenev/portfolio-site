@@ -126,6 +126,8 @@
   }
   .carousel {
     width: 100%;
+    min-height: auto;
+    background: $lightGrey;
     .carouselCell {
       width: 90%;
       height: auto;
@@ -197,7 +199,7 @@
   align-items: center;
   margin-bottom: 5%;
   a {
-    width: 180px;
+    width: 150px;
     padding: 10px;
     background: $seaGreen;
     border-radius: 4px;

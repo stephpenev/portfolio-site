@@ -24,23 +24,15 @@
           /></a>
         </div>
       </div>
-      <nav class="navMenu">
-        <div class="menuButton">
+      <nav class="navMenu" role="navigation">
+        <button class="menuButton" type="button" aria-haspopup="true">
           <div class="menuButtonBurger"></div>
-        </div>
-        <ul class="navList">
-          <a href="index.html#about"
-            ><li class="about" tabindex="0">About</li></a
-          >
-          <a href="index.html#projects"
-            ><li class="projects" tabindex="0">Projects</li></a
-          >
-          <a href="index.html#skills"
-            ><li class="skills" tabindex="0">Skills</li></a
-          >
-          <a href="index.html/contact"
-            ><li class="contact" tabindex="0">Contact</li></a
-          >
+        </button>
+        <ul class="navList" role="listbox" aria-expanded="false">
+          <a href="index.html#about" class="about" role="option" tabindex="0">About</a>
+          <a href="index.html#projects" class="projects" role="option" tabindex="0">Projects</a>
+          <a href="index.html#skills" class="contact" role="option" tabindex="0">Skills</a>
+          <a href="index.html/contact" class="contact" role="option" tabindex="0">Contact</a>
         </ul>
       </nav>
     </header>
@@ -106,7 +98,7 @@
       </div>
       <div class="projectTopButton">
         <div class="wrapper topFlex">
-          <p class="toTop" tabindex="0"><i class="fas fa-chevron-up"></i></p>
+          <button class="toTop" aria-label="Scroll to top of page"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
         </div>
       </div>
     </main>

@@ -24,23 +24,15 @@
           /></a>
         </div>
       </div>
-      <nav class="navMenu">
-        <div class="menuButton">
+      <nav class="navMenu" role="navigation">
+        <button class="menuButton" type="button" aria-haspopup="true">
           <div class="menuButtonBurger"></div>
-        </div>
-        <ul class="navList">
-          <a href="index.html#about"
-            ><li class="about" tabindex="0">About</li></a
-          >
-          <a href="index.html#projects"
-            ><li class="projects" tabindex="0">Projects</li></a
-          >
-          <a href="index.html#skills"
-            ><li class="skills" tabindex="0">Skills</li></a
-          >
-          <a href="index.html/contact"
-            ><li class="contact" tabindex="0">Contact</li></a
-          >
+        </button>
+        <ul class="navList" role="listbox" aria-expanded="false">
+          <a href="index.html#about" class="about" role="option" tabindex="0">About</a>
+          <a href="index.html#projects" class="projects" role="option" tabindex="0">Projects</a>
+          <a href="index.html#skills" class="contact" role="option" tabindex="0">Skills</a>
+          <a href="index.html/contact" class="contact" role="option" tabindex="0">Contact</a>
         </ul>
       </nav>
     </header>
@@ -49,37 +41,6 @@
         <h1>First Gulf <span>|</span> Branding</h1>
         <div class="projectAbout">
           <h3>Developed corporate and project branding assets.</h3>
-        </div>
-      </div>
-      <div class="contentBlock">
-        <div class="description">
-          <h2>ICSC 2018-19 | Exhibit, Print + Digital Design</h2>
-          <p>
-            Art Direction of the new company exhibit for the 2018 and 2019 ICSC
-            Retail Conference held in Toronto at the Metro Toronto Convention
-            Centre. I coordinated the design and production of the booth and a
-            new retail leasing app; developed all print and video graphics, and
-            managed all logistics of First Gulf’s participation at the show,
-            from 2015 to 2019.
-          </p>
-          <p>
-            The annual event is the most visible marketing initiative that First
-            Gulf is involved in. The goal of the 2018 redesign was to evoke
-            openness, transparency and a cohesive, elegant physicality.
-          </p>
-        </div>
-        <div class="img">
-          <img
-            src="./assets/1-DSC_0015_web.jpg"
-            alt="First Gulf exhibit booth at 2018 Retail Conference"
-          />
-        </div>
-        <h3>Illuminated Booth Graphics</h3>
-        <div class="img">
-          <img
-            src="./assets/2-Booth_Poster_Final_Combined_sm.jpg"
-            alt="First Gulf exhibit booth at 2018 Retail Conference"
-          />
         </div>
       </div>
       <div class="contentBlock">
@@ -176,11 +137,10 @@
       </div>
       <div class="contentBlock">
         <div class="description">
-          <h2>Branded Folder</h2>
+          <h2>Business System</h2>
           <p>
-            Illuminating the architectural details seen throughout First Gulf
-            office developments. The sense of movement and connection is also
-            expressed through the interior line element.
+            I designed a minimalist company folder highlighting the
+            architectural details of selected First Gulf developments.
           </p>
         </div>
         <div class="carousel" data-flickity='{ "freeScroll": true }'>
@@ -204,12 +164,12 @@
           </div>
         </div>
       </div>
-      <div class="contentBlock last">
+      <div class="contentBlock">
         <div class="description">
           <h2>351 King Street East | The Globe & Mail Centre</h2>
           <p>
-            Developed a property brand for use across leasing signage, vehicle
-            graphics and other building branding opportunities. Created in
+            I developed a property brand for use across leasing signage, vehicle
+            graphics and other building branding opportunities. It was conceptualized in
             collaboration with the Sr. Manager.
           </p>
         </div>
@@ -240,6 +200,37 @@
           </li>
         </ul>
       </div>
+      <div class="contentBlock last">
+        <div class="description">
+          <h2>ICSC 2018-19 | Exhibit, Print + Digital Design</h2>
+          <p>
+            I led the art direction and branding of the new company exhibit for the 2018
+            and 2019 ICSC Retail Conference held in Toronto at the Metro Toronto
+            Convention Centre. I coordinated the design and production of the
+            booth and a new retail leasing app; developed all print and video
+            graphics, and managed all logistics of First Gulf’s participation at
+            the show, from 2015 to 2019.
+          </p>
+          <p>
+            The annual event is the most visible marketing initiative that First
+            Gulf is involved in. The goal of the 2018 redesign was to evoke
+            openness, transparency and a cohesive, elegant physicality.
+          </p>
+        </div>
+        <div class="img">
+          <img
+            src="./assets/1-DSC_0015_web.jpg"
+            alt="First Gulf exhibit booth at 2018 Retail Conference"
+          />
+        </div>
+        <h3>Illuminated Booth Graphics</h3>
+        <div class="img">
+          <img
+            src="./assets/2-Booth_Poster_Final_Combined_sm.jpg"
+            alt="First Gulf exhibit booth at 2018 Retail Conference"
+          />
+        </div>
+      </div>
       <div class="nextProject">
         <a href="monde.html">
           <h4>Next Project</h4>
@@ -247,7 +238,7 @@
       </div>
       <div class="projectTopButton">
         <div class="wrapper topFlex">
-          <p class="toTop" tabindex="0"><i class="fas fa-chevron-up"></i></p>
+          <button class="toTop" aria-label="Scroll to top of page"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
         </div>
       </div>
     </main>
