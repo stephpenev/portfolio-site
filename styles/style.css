@@ -1623,12 +1623,11 @@ footer p {
           justify-content: flex-end;
 }
 
-.projectTopButton .topFlex p {
+.projectTopButton .topFlex button {
   color: #126657;
   font-size: 5rem;
   cursor: pointer;
   padding: 3px;
-  font-weight: lighter;
 }
 
 .projectFooter {

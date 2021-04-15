@@ -223,12 +223,11 @@
   .topFlex {
     display: flex;
     justify-content: flex-end;
-    p {
+    button {
       color: $darkGreen;
       font-size: 5rem;
       cursor: pointer;
       padding: 3px;
-      font-weight: lighter;
     }
   }
 }
