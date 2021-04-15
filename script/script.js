@@ -23,20 +23,59 @@ menuButton.addEventListener('click', () => {
   }
 });
 
-// Menu smooth scroll to sections
+// Smooth Scroll to sections in Menu
 
-navList.addEventListener('click', (event) => {
-  if (event.target.tagName == "LI") {
-    const type = event.target.className;
-    const scrollTo = document.querySelector("#" + type);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
-  }
-});
+// navList.addEventListener('click', (event) => {
+//   if (event.target.tagName == "LI") {
+//     const type = event.target.className;
+//     const scrollTo = document.querySelector("#" + type);
+//     scrollTo.scrollIntoView({ behavior: "smooth" });
+//   }
+// });
 
-toTop.addEventListener('click', () => {
-    const scrollToTop = document.getElementById("header");
-    scrollToTop.scrollIntoView({ behavior: "smooth" });
-});
+function anchorLinkHandler(e) {
+  const distanceToTop = (el) => Math.floor(el.getBoundingClientRect().top);
+
+  e.preventDefault();
+  const targetID = this.getAttribute("href");
+  const targetAnchor = document.querySelector(targetID);
+  if (!targetAnchor) return;
+  const originalTop = distanceToTop(targetAnchor);
+
+  window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
+
+  const checkIfDone = setInterval(function () {
+    const atBottom =
+      window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+    if (distanceToTop(targetAnchor) === 0 || atBottom) {
+      targetAnchor.tabIndex = "-1";
+      targetAnchor.focus();
+      window.history.pushState("", "", targetID);
+      clearInterval(checkIfDone);
+    }
+  }, 100);
+}
+
+const linksToAnchors = document.querySelectorAll('a[href^="#"]');
+
+linksToAnchors.forEach((each) => (each.onclick = anchorLinkHandler));
+
+// Smooth scroll for To Top and Contact links
+
+// Move empty object to top and namespace other functions:
+myApp = {};
+
+const rootEl = document.documentElement;
+
+myApp.scrollToTop = function () {
+  rootEl.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+toTop.addEventListener("click", myApp.scrollToTop);
+
 
 toContact.addEventListener('click', () => {
   const scrollToContact = document.getElementById("contact");

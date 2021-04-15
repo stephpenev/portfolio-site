@@ -28,15 +28,15 @@
       <div class="mouseDown">
         <div class="line"></div>
       </div>
-      <nav class="navMenu">
-        <div class="menuButton">
+      <nav class="navMenu" role="navigation">
+        <button class="menuButton" type="button" aria-haspopup="true">
           <div class="menuButtonBurger"></div>
-        </div>
-        <ul class="navList">
-          <li class="about" tabindex="0">About</li>
-          <li class="projects" tabindex="0">Projects</li>
-          <li class="skills" tabindex="0">Skills</li>
-          <li class="contact" tabindex="0">Contact</li>
+        </button>
+        <ul class="navList" role="listbox" aria-expanded="false">
+          <a href="#about" class="about" role="option" tabindex="0">About</a>
+          <a href="#projects" class="projects" role="option" tabindex="0">Projects</a>
+          <a href="#skills" class="contact" role="option" tabindex="0">Skills</a>
+          <a href="#contact" class="contact" role="option" tabindex="0">Contact</a>
         </ul>
       </nav>
     </header>
@@ -420,7 +420,7 @@
       </section>
       <div class="topButton">
         <div class="wrapper topFlex">
-          <p class="toTop" tabindex="0"><i class="fas fa-chevron-up"></i></p>
+          <button class="toTop" aria-label="Scroll to top of page"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
         </div>
       </div>
     </main>

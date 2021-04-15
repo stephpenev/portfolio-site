@@ -48,15 +48,14 @@
     margin-top: 100px;
     margin-left: 40%;
     padding-left: 2%;
-    width: 40%;
-    min-width: 420px;
+    width: 50%;
+    min-width: 450px;
     border-left: 12px solid $brandGreen;
   }
 }
 
 nav {
   width: 150px;
-  height: 250px;
   position: fixed;
   top: 120px;
   right: 0;
@@ -75,6 +74,10 @@ nav {
     height: 80px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: transparent;
   }
 
   .menuButtonBurger {
@@ -127,15 +130,18 @@ nav {
   }
   ul {
     display: none;
-
-    li {
-      margin: 10px 30px;
+    height: 170px;
+    a {
       @include navLink(2rem);
-      cursor: pointer;
-
+      line-height: 3rem;
+      margin: 15rem 18rem 15rem 15rem;
       &:hover,
       &:focus {
         box-shadow: inset 0 -10px $mediumRose;
+      }
+      &:active,
+      &:visited {
+        color: $white !important;
       }
     }
   }

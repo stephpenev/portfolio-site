@@ -1,5 +1,12 @@
 // Global styles
 
+html {
+  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
 body * {
   margin: 0;
   padding: 0;
@@ -25,6 +32,11 @@ ul {
 
 img {
   display: block;
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 // Section 1 - About
@@ -88,9 +100,7 @@ img {
     margin: 30px 0 20px 7px;
 
     button {
-      background: none;
       color: inherit;
-      border: none;
       font: inherit;
       cursor: pointer;
       padding: 2px 7px 10px;
@@ -175,6 +185,7 @@ img {
             color: $white;
             padding: 6px 15px;
             margin-right: 5px;
+            border-radius: 4px;
 
             &:hover,
             &:focus {
@@ -454,9 +465,9 @@ img {
   .topFlex {
     display: flex;
     justify-content: flex-end;
-    p {
+    button {
       color: $darkGreen;
-      font-size: 5rem;
+      font-size: 4.5rem;
       cursor: pointer;
       padding: 3px;
     }

@@ -309,14 +309,13 @@ html {
   margin-top: 100px;
   margin-left: 40%;
   padding-left: 2%;
-  width: 40%;
-  min-width: 420px;
-  border-left: 12px solid #77CDBE;
+  width: 50%;
+  min-width: 450px;
+  border-left: 12px solid #77cdbe;
 }
 
 nav {
   width: 150px;
-  height: 250px;
   position: fixed;
   top: 120px;
   right: 0;
@@ -351,6 +350,12 @@ nav .menuButton {
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  background: transparent;
 }
 
 nav .menuButtonBurger {
@@ -398,41 +403,56 @@ nav .menuButton.open .menuButtonBurger {
 nav .menuButton.open .menuButtonBurger::before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 nav .menuButton.open .menuButtonBurger::after {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 nav ul {
   display: none;
+  height: 170px;
 }
 
-nav ul li {
-  margin: 10px 30px;
+nav ul a {
   font-size: 2rem;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Jost", sans-serif;
   font-weight: 400;
-  cursor: pointer;
+  line-height: 3rem;
+  margin: 15rem 18rem 15rem 15rem;
 }
 
-nav ul li:hover, nav ul li:focus {
-  -webkit-box-shadow: inset 0 -10px #D2B3AF;
-          box-shadow: inset 0 -10px #D2B3AF;
+nav ul a:hover, nav ul a:focus {
+  -webkit-box-shadow: inset 0 -10px #d2b3af;
+          box-shadow: inset 0 -10px #d2b3af;
+}
+
+nav ul a:active, nav ul a:visited {
+  color: #ffffff !important;
 }
 
 .navMenu.open {
-  background-color: #7192A3;
+  background-color: #7192a3;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .navList.open {
   display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body * {
@@ -471,8 +491,13 @@ img {
   display: block;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .aboutSection {
-  background-color: #EDE1DF;
+  background-color: #ede1df;
   height: 90vh;
   padding-top: 65px;
   overflow: hidden;
@@ -519,8 +544,8 @@ img {
 }
 
 .aboutSection .aboutFlex .aboutMe .aboutContact {
-  -webkit-box-shadow: inset 0 -6px #77CDBE;
-          box-shadow: inset 0 -6px #77CDBE;
+  -webkit-box-shadow: inset 0 -6px #77cdbe;
+          box-shadow: inset 0 -6px #77cdbe;
   cursor: pointer;
 }
 
@@ -552,9 +577,7 @@ img {
 }
 
 .projectsSection .thirdHeadingFlex button {
-  background: none;
   color: inherit;
-  border: none;
   font: inherit;
   cursor: pointer;
   padding: 2px 7px 10px;
@@ -565,8 +588,8 @@ img {
 }
 
 .projectsSection .underline {
-  -webkit-box-shadow: inset 0 -12px #77CDBE;
-          box-shadow: inset 0 -12px #77CDBE;
+  -webkit-box-shadow: inset 0 -12px #77cdbe;
+          box-shadow: inset 0 -12px #77cdbe;
 }
 
 .projectsSection .devProjects {
@@ -655,7 +678,7 @@ img {
   line-height: 2.2rem;
   margin-right: 3%;
   display: inline-block;
-  background-color: #EDE1DF;
+  background-color: #ede1df;
   margin-top: 5px;
 }
 
@@ -676,10 +699,11 @@ img {
   font-family: "Jost", sans-serif;
   font-weight: 400;
   line-height: 2rem;
-  background-color: #7192A3;
-  color: #FFFFFF;
+  background-color: #7192a3;
+  color: #ffffff;
   padding: 6px 15px;
   margin-right: 5px;
+  border-radius: 4px;
 }
 
 .projectsSection .devProjects .devProjectSingle .devFlex .projectLinks a:hover, .projectsSection .devProjects .devProjectSingle .devFlex .projectLinks a:focus {
@@ -737,7 +761,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #77CDBE;
+  background-color: #77cdbe;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -764,9 +788,9 @@ img {
   font-weight: 400;
   line-height: 2rem;
   font-weight: bolder;
-  color: #FFFFFF;
-  -webkit-box-shadow: inset 0 -8px #D2B3AF;
-          box-shadow: inset 0 -8px #D2B3AF;
+  color: #ffffff;
+  -webkit-box-shadow: inset 0 -8px #d2b3af;
+          box-shadow: inset 0 -8px #d2b3af;
   padding-bottom: 4px;
 }
 
@@ -935,7 +959,7 @@ img {
 .contactSection {
   padding-top: 65px;
   height: 80vh;
-  background-color: #EDE1DF;
+  background-color: #ede1df;
   overflow: hidden;
 }
 
@@ -1021,7 +1045,7 @@ img {
 
 .topButton {
   height: 10vh;
-  background: #EDE1DF;
+  background: #ede1df;
 }
 
 .topButton .topFlex {
@@ -1033,15 +1057,15 @@ img {
           justify-content: flex-end;
 }
 
-.topButton .topFlex p {
+.topButton .topFlex button {
   color: #124966;
-  font-size: 5rem;
+  font-size: 4.5rem;
   cursor: pointer;
   padding: 3px;
 }
 
 footer {
-  background-color: #EDE1DF;
+  background-color: #ede1df;
   height: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1068,7 +1092,7 @@ footer p {
     font-size: 1.5rem;
     margin-left: 35%;
     margin-top: 120px;
-    width: 35%;
+    width: 30%;
     min-width: 400px;
   }
 }
@@ -1079,8 +1103,7 @@ footer p {
     line-height: 3.5rem;
     margin-left: 30%;
     margin-top: 150px;
-    width: 25%;
-    min-width: 330px;
+    min-width: 350px;
   }
 }
 
@@ -1351,8 +1374,8 @@ footer p {
 
 .contentBlock .description p a {
   color: #060000;
-  -webkit-box-shadow: inset 0 -6px #77CDBE;
-          box-shadow: inset 0 -6px #77CDBE;
+  -webkit-box-shadow: inset 0 -6px #77cdbe;
+          box-shadow: inset 0 -6px #77cdbe;
   cursor: pointer;
 }
 
@@ -1368,7 +1391,7 @@ footer p {
   line-height: 2rem;
   margin: 40px 0 20px;
   padding-left: 7px;
-  border-left: 6px solid #77CDBE;
+  border-left: 6px solid #77cdbe;
 }
 
 .contentBlock .img {
@@ -1537,7 +1560,7 @@ footer p {
 .nextProject a {
   width: 180px;
   padding: 10px;
-  background: #7192A3;
+  background: #7192a3;
   border-radius: 4px;
 }
 
@@ -1554,11 +1577,11 @@ footer p {
   line-height: 2.2rem;
   font-weight: bolder;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .projectTopButton {
-  background: #FFFFFF;
+  background: #ffffff;
   height: 10vh;
 }
 
@@ -1580,7 +1603,7 @@ footer p {
 }
 
 .projectFooter {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 @media (max-width: 1000px) {
