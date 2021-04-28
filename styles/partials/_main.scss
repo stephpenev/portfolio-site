@@ -358,6 +358,12 @@ button {
 
       img {
         width: 70%;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+          transform: scale(1.05);
+        }
       }
 
       h4 {

@@ -903,6 +903,13 @@ button {
 
 .skillsSection ul li img {
   width: 70%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.skillsSection ul li img:hover, .skillsSection ul li img:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .skillsSection ul li h4 {
@@ -1257,6 +1264,12 @@ footer p {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  .skillsSection ul li img {
+    width: 60%;
+  }
+  .skillsSection .nonTechSkills ul li img {
+    width: 60%;
   }
 }
 
