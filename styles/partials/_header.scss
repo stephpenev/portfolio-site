@@ -132,8 +132,8 @@ nav {
     display: none;
     height: 170px;
     a {
-      @include navLink(2rem);
-      line-height: 3rem;
+      @include navLink(2.3rem);
+      line-height: 3.4rem;
       margin: 15rem 18rem 15rem 15rem;
       &:hover,
       &:focus {
@@ -149,7 +149,7 @@ nav {
 
 // Menu expansion on click
 .navMenu.open {
-  background-color: $seaGreen;
+  background-color: $darkGreen;
   transition: all 0.5s ease-in-out;
 }
 
