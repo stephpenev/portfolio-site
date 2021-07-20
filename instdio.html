@@ -10,6 +10,8 @@
       src="https://kit.fontawesome.com/412d33e412.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script/script.js" defer></script>
+    <script src="./script/flickity.pkgd.js" defer></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
@@ -28,11 +30,27 @@
         <button class="menuButton" type="button" aria-haspopup="true">
           <div class="menuButtonBurger"></div>
         </button>
-        <ul class="navList" role="listbox" aria-expanded="false">
-          <a href="index.html#about" class="about" role="option" tabindex="0">About</a>
-          <a href="index.html#projects" class="projects" role="option" tabindex="0">Projects</a>
-          <a href="index.html#skills" class="contact" role="option" tabindex="0">Skills</a>
-          <a href="index.html/contact" class="contact" role="option" tabindex="0">Contact</a>
+        <ul class="navList" role="listbox" aria-expanded="false" id="menu">
+          <a href="index.html#about" class="about" role="option" tabindex="0"
+            >About</a
+          >
+          <a
+            href="index.html#projects"
+            class="projects"
+            role="option"
+            tabindex="0"
+            >Projects</a
+          >
+          <a href="index.html#skills" class="contact" role="option" tabindex="0"
+            >Skills</a
+          >
+          <a
+            href="index.html/contact"
+            class="contact"
+            role="option"
+            tabindex="0"
+            >Contact</a
+          >
         </ul>
       </nav>
     </header>
@@ -41,8 +59,8 @@
         <h1>Instdio Communications <span>|</span> Branding + Assets</h1>
         <div class="projectAbout">
           <h3>
-            Custom branding and design assets for business communications consultancy, Instdio
-            Communications.
+            Custom branding and design assets for business communications
+            consultancy, Instdio Communications.
           </h3>
         </div>
       </div>
@@ -56,7 +74,10 @@
             a suite of business applications under development.
           </p>
         </div>
-        <div class="carousel" data-flickity='{ "freeScroll": true, "imagesLoaded": true }'>
+        <div
+          class="carousel"
+          data-flickity='{ "freeScroll": true, "imagesLoaded": true }'
+        >
           <div class="carouselCell">
             <img src="./assets/Instdio_branding1.png" alt="Instdio logo" />
           </div>
@@ -93,7 +114,5 @@
     <footer class="projectFooter">
       <p>Made by Steph Penev &copy 2021</p>
     </footer>
-    <script src="./script/script.js"></script>
-    <script src="./script/flickity.pkgd.js"></script>
   </body>
 </html>

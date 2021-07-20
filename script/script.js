@@ -71,46 +71,55 @@ myApp.scrollButtons = function () {
 
   toTop.addEventListener("click", scrollToTop);
 
-  toContact.addEventListener("click", () => {
-    scrollToContact.scrollIntoView({ behavior: "smooth" });
-  });
+  if (toContact) {
+    toContact.addEventListener("click", () => {
+      scrollToContact.scrollIntoView({ behavior: "smooth" });
+    })
+  } else {
+    null;
+  }
+
+    myApp.toggleProjects(toContact);
 };
 
 // Toggling dev and design sections visible and invisible //
 
-myApp.toggleProjects = function () {
-  const devButton = document.querySelector(".devButton");
-  const designButton = document.querySelector(".designButton");
-  const devProjects = document.querySelector(".devProjects");
-  const designProjects = document.querySelector(".designProjects");
-  let devOpen = false;
-  let designOpen = false;
+myApp.toggleProjects = function (toContact) {
 
-  devButton.addEventListener("click", () => {
-    if (!devOpen) {
-      devProjects.classList.add("open");
-      devProjects.classList.remove("close");
-      designProjects.classList.add("close");
-      designProjects.classList.remove("open");
-      devButton.classList.add("underline");
-      designButton.classList.remove("underline");
-    } else {
-      devOpen = false;
-    }
-  });
-
-  designButton.addEventListener("click", () => {
-    if (!designOpen) {
-      designProjects.classList.add("open");
-      designProjects.classList.remove("close");
-      devProjects.classList.add("close");
-      devProjects.classList.remove("open");
-      designButton.classList.add("underline");
-      devButton.classList.remove("underline");
-    } else {
-      designOpen = false;
-    }
-  });
+  if (toContact) {
+    const devButton = document.querySelector(".devButton");
+    const designButton = document.querySelector(".designButton");
+    const devProjects = document.querySelector(".devProjects");
+    const designProjects = document.querySelector(".designProjects");
+    let devOpen = false;
+    let designOpen = false;
+  
+    devButton.addEventListener("click", () => {
+      if (!devOpen) {
+        devProjects.classList.add("open");
+        devProjects.classList.remove("close");
+        designProjects.classList.add("close");
+        designProjects.classList.remove("open");
+        devButton.classList.add("underline");
+        designButton.classList.remove("underline");
+      } else {
+        devOpen = false;
+      }
+    });
+  
+    designButton.addEventListener("click", () => {
+      if (!designOpen) {
+        designProjects.classList.add("open");
+        designProjects.classList.remove("close");
+        devProjects.classList.add("close");
+        devProjects.classList.remove("open");
+        designButton.classList.add("underline");
+        devButton.classList.remove("underline");
+      } else {
+        designOpen = false;
+      }
+    });
+  }
 };
 
 // Init App
@@ -118,7 +127,6 @@ myApp.toggleProjects = function () {
 myApp.init = function () {
   myApp.scrollButtons();
   myApp.toggleMenu();
-  myApp.toggleProjects();
 };
 
 myApp.init();
